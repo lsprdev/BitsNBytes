@@ -1,17 +1,34 @@
 import { PrismaClient } from '@prisma/client';
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 import { auth, requiresAuth } from 'express-openid-connect'
 
-const prisma = new PrismaClient()
-dotenv.config();
 const app = express();
+dotenv.config();
+const prisma = new PrismaClient()
+
+app.set("view engine", "ejs");
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 const port = process.env.PORT || 3000;
 
+// GET
+
 app.get("/", (res, req) =>{
-    req.send("Hello");
+    req.render("index.ejs");
 });
+
+
+
+
+
+// POST
+
+
 
 
 
@@ -28,11 +45,13 @@ const config = {
 
 app.use(auth(config));
 
-app.get('/profile', requiresAuth(), (req, res) => {
+app.get("/admin", requiresAuth(), (req, res) => {
     res.send(JSON.stringify(req.oidc.user));
 });
-  
+
+
+// Running
 
 app.listen(port, () => {
-    console.log( `Server started at http://localhost:${ port }.` );
+    console.log( `Port: http://localhost:${ port }.` );
 });
