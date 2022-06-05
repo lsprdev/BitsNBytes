@@ -18,8 +18,13 @@ const port = process.env.PORT || 3000;
 
 // GET
 
-app.get("/", (res, req) =>{
-    req.render("index.ejs");
+app.get("/", async (res, req) =>{
+    await prisma.$connect();
+
+    const dogs = await prisma.dog.findMany({});
+
+
+    req.render("index.ejs", ({ data: dogs }));
 });
 
 

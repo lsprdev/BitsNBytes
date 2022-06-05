@@ -16,6 +16,7 @@
 <!-- DARKER MAICON'S COLOR [#B9A997] -->
 <!-- BRIGHTER MAICON'S COLOR [#D2CBB4] -->
 <!-- GREY [#A09F9F] --> 
+<!-- https://i.imgur.com/Q3wWuuh.png -->
  <body class="bg-[#D2CBB4]">
     <nav class="bg-[#050205] shadow-xl">
       <div class="max-w-6xl mx-auto px-4">
@@ -37,9 +38,19 @@
           </div>
       </div>
     </nav>
+    
+    <%
+      var datas = data;
+    %>
+    
+    <table>
+      <% for(var i=0; i < datas.length; i++) { %>
+         <tr>
+           <td><a href="/dog/<%= data[i].id %>"><%= data[i].name %></a></td>
+         </tr>
+      <% } %>
+    </table>
 
-      
-
-
+   
  </body>
  </html>
