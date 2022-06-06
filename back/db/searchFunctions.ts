@@ -66,5 +66,16 @@ export async function getDaily(dog_id: string){
 }
 
 export async function getMedical(dog_id: string){
-    
+    await prisma.$connect();
+    const medical = await prisma.medicalStatus.findMany({
+        where: {
+            dog_id: dog_id
+        },
+    });
+    if(!medical) {
+        prisma.$disconnect();
+        return new response(503, "Medical Status not found!");
+    }
+    await prisma.$disconnect();
+    return new response(200, "Medical Status found!", medical);
 }

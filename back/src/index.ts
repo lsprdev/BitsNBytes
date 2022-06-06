@@ -37,21 +37,16 @@ app.get("/dog/comments/id/:id", async (req, res) => {
     res.send(comments.content);
 });
 
-// Transformar em função(db/searchFunctions.ts)
 app.get("/dog/dailystatus/id/:id", async (req, res) => {
     await prisma.$connect();
     const daily = await getDaily(req.params.id);
     res.send(daily.content);
 });
-// Transformar em função(db/searchFunctions.ts)
+
 app.get("/dog/medicalstatus/id/:id", async (req, res) => {
     await prisma.$connect();
-    const medicalstatus = await prisma.medicalStatus.findMany({
-        where: {
-            dog_id: req.params.id
-        }
-    });
-    res.send(medicalstatus);
+    const medical = await getMedical(req.params.id);
+    res.send(medical.content);
 });
 
 // Teste para enviar informações para o banco de dados
