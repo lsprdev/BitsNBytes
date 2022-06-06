@@ -5,7 +5,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import { auth, requiresAuth } from 'express-openid-connect'
 
-import { getDogs, getDog, getComments } from "../db/searchFunctions";
+import { getDogs, getDog, getComments, getDaily, getMedical } from "../db/searchFunctions";
 
 const app = express();
 dotenv.config();
@@ -40,12 +40,8 @@ app.get("/dog/comments/id/:id", async (req, res) => {
 // Transformar em função(db/searchFunctions.ts)
 app.get("/dog/dailystatus/id/:id", async (req, res) => {
     await prisma.$connect();
-    const dailystatus = await prisma.dailyStatus.findMany({
-        where: {
-            dog_id: req.params.id
-        }
-    });
-    res.send(dailystatus);
+    const daily = await getDaily(req.params.id);
+    res.send(daily.content);
 });
 // Transformar em função(db/searchFunctions.ts)
 app.get("/dog/medicalstatus/id/:id", async (req, res) => {

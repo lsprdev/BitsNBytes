@@ -46,9 +46,25 @@ export async function getComments(dog_id: string) {
         prisma.$disconnect();
         return new response(503, "Comments not found!");
     }
-
     await prisma.$disconnect();
     return new response(200, "Comments found!", comments);
+}
 
+export async function getDaily(dog_id: string){
+    await prisma.$connect();
+    const daily = await prisma.dailyStatus.findMany({
+        where: {
+            dog_id: dog_id
+        },
+    });
+    if(!daily) {
+        prisma.$disconnect();
+        return new response(503, "Daily Status not found!");
+    }
+    await prisma.$disconnect();
+    return new response(200, "Daily Status found!", daily);
+}
 
+export async function getMedical(dog_id: string){
+    
 }
