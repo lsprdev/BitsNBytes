@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 
 export async function getDogs(){
     await prisma.$connect();
-    const dogs = await prisma.dog.findMany({});
+    const dogs = await prisma.dog.findMany();
     
     if (!dogs) {
         prisma.$disconnect();

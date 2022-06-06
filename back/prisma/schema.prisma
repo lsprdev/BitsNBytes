@@ -11,8 +11,49 @@ datasource db {
 }
 
 model Dog {
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  name      String
-  age       Int
-  owner     String
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  photo             String?
+  name              String
+  age               Int
+  weight            Int
+  description       String
+  owner_name        String
+  daily_status      DailyStatus[]
+  medical_status    MedicalStatus[]
+  comments          Comment[]
+}
+
+// model Tag {
+//   id          String    @id @default(auto()) @map("_id") @db.ObjectId
+//   name        String
+//   color       String
+//   created_by  String
+//   date        DateTime
+// }
+
+model DailyStatus {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  dog       Dog?      @relation(fields: [dog_id], references: [id])
+  dog_id    String?   @db.ObjectId
+  text      String
+  date      DateTime
+}
+
+model MedicalStatus {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  dog         Dog?       @relation(fields: [dog_id], references: [id])
+  dog_id      String?    @db.ObjectId
+  text        String
+  date        DateTime
+}
+
+model Comment {
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  author_name       String
+  author_class      String
+  author_year       String
+  dog               Dog?       @relation(fields: [dog_id], references: [id])
+  dog_id            String?    @db.ObjectId
+  text              String
+  date              DateTime
 }

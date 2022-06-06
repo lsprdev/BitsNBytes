@@ -45,7 +45,12 @@
     <table>
       <% for(var i=0; i < data.length; i++) { %>
          <tr>
-           <td><a href="/dog/<%= data[i].id %>"><%= data[i].name %></a></td>
+           <td> <a href="/dog/id/<%= data[i].id %>"><%= data[i].name %>: </a>  
+                <a href="/dog/comments/id/<%= data[i].id %>">Comentários -</a>
+                <a href="/dog/dailystatus/id/<%= data[i].id %>">Status Diário -</a> 
+                <a href="/dog/medicalstatus/id/<%= data[i].id %>">Status Médico</a>  
+            </td>
+
          </tr>
       <% } %>
     </table>

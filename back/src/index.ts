@@ -26,19 +26,84 @@ app.get("/", async (res, req) =>{
 });
 
 // Transformar em função(db/searchFunctions.ts)
-app.get("/dog/:id", async (req, res) => {
+app.get("/dog/id/:id", async (req, res) => {
     await prisma.$connect();
     const dog = await prisma.dog.findUnique({
         where: {
             id: req.params.id
         }
-    })
+    });
     res.send(dog);
 });
+// Transformar em função(db/searchFunctions.ts)
+app.get("/dog/comments/id/:id", async (req, res) => {
+    await prisma.$connect();
+    const comment = await prisma.comment.findMany();
+    for (let i = 0; i < comment.length; i++) {
+        if (comment[i].dog_id === req.params.id) {
+            res.send(comment[i]);
+        }
+    }
+});
+// Transformar em função(db/searchFunctions.ts)
+app.get("/dog/dailystatus/id/:id", async (req, res) => {
+    await prisma.$connect();
+    const comment = await prisma.dailyStatus.findMany();
+    for (let i = 0; i < comment.length; i++) {
+        if (comment[i].dog_id === req.params.id) {
+            res.send(comment[i]);
+        }
+    }
+});
+// Transformar em função(db/searchFunctions.ts)
+app.get("/dog/medicalstatus/id/:id", async (req, res) => {
+    await prisma.$connect();
+    const comment = await prisma.medicalStatus.findMany();
+    for (let i = 0; i < comment.length; i++) {
+        if (comment[i].dog_id === req.params.id) {
+            res.send(comment[i]);
+        }
+    }
+});
 
-// POST
+// Teste para enviar informações para o banco de dados
+app.get("/send", async (req, res) => {
+    await prisma.$connect();
+    const data = await createDog();
+}); 
 
-
+async function createDog() {
+    await prisma.$connect();
+    const dog = await prisma.dog.create({
+        data: {
+            name: "Maicon",
+            age: 2,
+            weight: 20,
+            description: "Gente boa",
+            owner_name: "João da Silva",
+            daily_status: {
+                create: {
+                    date: new Date(),
+                    text: "Tudo bem"
+                }
+            },
+            medical_status: {
+                create: {
+                    date: new Date(),
+                    text: "Tudo bem"
+                }
+            },
+            comments: {
+                create: {
+                    author_name: "João da Silva",
+                    author_class: "3INFO",
+                    author_year: "3",
+                    date: new Date(),
+                    text: "Tudo bem"
+                }
+            }
+    }});
+}
 
 // Auth0
 
