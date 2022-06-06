@@ -20,29 +20,34 @@ const port = process.env.PORT || 3000;
 
 // GET
 
+// Returns all dogs
 app.get("/", async (res, req) =>{
     const dogs = await getDogs();
     req.render("index.ejs", { dogs: dogs.content });
 });
 
+// Returns specific dog
 app.get("/dog/id/:id", async (req, res) => {
     await prisma.$connect();
     const dog = await getDog(req.params.id);
     res.send(dog.content);
 });
 
+// Returns dog-specific comments
 app.get("/dog/comments/id/:id", async (req, res) => {
     await prisma.$connect();
     const comments = await getComments(req.params.id);
     res.send(comments.content);
 });
 
+// Returns dog-specific Daily Status
 app.get("/dog/dailystatus/id/:id", async (req, res) => {
     await prisma.$connect();
     const daily = await getDaily(req.params.id);
     res.send(daily.content);
 });
 
+// Returns dog-specific Medical Status
 app.get("/dog/medicalstatus/id/:id", async (req, res) => {
     await prisma.$connect();
     const medical = await getMedical(req.params.id);

@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-// Return all dogs from database
+// Returns all dogs
 export async function getDogs(){
     await prisma.$connect();
     const dogs = await prisma.dog.findMany();
@@ -18,7 +18,7 @@ export async function getDogs(){
     return new response(200, "Dogs found", dogs)
 }
 
-//Return expecific dog from database
+// Returns specific dog
 export async function getDog(dog_id: string) {
     await prisma.$connect();
     const dog = await prisma.dog.findUnique({
@@ -34,7 +34,7 @@ export async function getDog(dog_id: string) {
     return new response(200, `Dog ${dog_id} found!`, dog);
 }
 
-//Return expecific comments from database
+// Returns dog-specific comments
 export async function getComments(dog_id: string) {
     await prisma.$connect();
     const comments = await prisma.comment.findMany({
@@ -50,6 +50,7 @@ export async function getComments(dog_id: string) {
     return new response(200, "Comments found!", comments);
 }
 
+// Returns dog-specific Daily Status
 export async function getDaily(dog_id: string){
     await prisma.$connect();
     const daily = await prisma.dailyStatus.findMany({
@@ -65,6 +66,7 @@ export async function getDaily(dog_id: string){
     return new response(200, "Daily Status found!", daily);
 }
 
+// Returns dog-specific Medical Status
 export async function getMedical(dog_id: string){
     await prisma.$connect();
     const medical = await prisma.medicalStatus.findMany({
