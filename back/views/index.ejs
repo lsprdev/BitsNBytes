@@ -40,11 +40,10 @@
     </nav>
     
     <%
-      var datas = data;
+      var data = dogs;
     %>
-    
     <table>
-      <% for(var i=0; i < datas.length; i++) { %>
+      <% for(var i=0; i < data.length; i++) { %>
          <tr>
            <td><a href="/dog/<%= data[i].id %>"><%= data[i].name %></a></td>
          </tr>

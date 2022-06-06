@@ -5,6 +5,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import { auth, requiresAuth } from 'express-openid-connect'
 
+import { getDogs } from "../db/searchFunctions";
+
 const app = express();
 dotenv.config();
 const prisma = new PrismaClient()
@@ -19,21 +21,22 @@ const port = process.env.PORT || 3000;
 // GET
 
 app.get("/", async (res, req) =>{
-    await prisma.$connect();
-
-    const dogs = await prisma.dog.findMany({});
-
-
-    req.render("index.ejs", ({ data: dogs }));
+    const dogs = await getDogs();
+    req.render("index.ejs", { dogs: dogs.content });
 });
 
-
-
-
+// Transformar em função(db/searchFunctions.ts)
+app.get("/dog/:id", async (req, res) => {
+    await prisma.$connect();
+    const dog = await prisma.dog.findUnique({
+        where: {
+            id: req.params.id
+        }
+    })
+    res.send(dog);
+});
 
 // POST
-
-
 
 
 
