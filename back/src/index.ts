@@ -5,7 +5,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import { auth, requiresAuth } from 'express-openid-connect'
 
-import { getDogs, getDog } from "../db/searchFunctions";
+import { getDogs, getDog, getComments } from "../db/searchFunctions";
 
 const app = express();
 dotenv.config();
@@ -28,20 +28,15 @@ app.get("/", async (res, req) =>{
 app.get("/dog/id/:id", async (req, res) => {
     await prisma.$connect();
     const dog = await getDog(req.params.id);
-    console.log(dog)
     res.send(dog.content);
 });
 
-// Transformar em função(db/searchFunctions.ts)
 app.get("/dog/comments/id/:id", async (req, res) => {
     await prisma.$connect();
-    const comment = await prisma.comment.findMany({
-        where: {
-            dog_id: req.params.id   
-        }
-    });
-    res.send(comment);
+    const comments = await getComments(req.params.id);
+    res.send(comments.content);
 });
+
 // Transformar em função(db/searchFunctions.ts)
 app.get("/dog/dailystatus/id/:id", async (req, res) => {
     await prisma.$connect();

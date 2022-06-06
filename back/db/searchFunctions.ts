@@ -37,5 +37,18 @@ export async function getDog(dog_id: string) {
 //Return expecific comments from database
 export async function getComments(dog_id: string) {
     await prisma.$connect();
+    const comments = await prisma.comment.findMany({
+        where: {
+            dog_id: dog_id
+        },
+    });
+    if(!comments) {
+        prisma.$disconnect();
+        return new response(503, "Comments not found!");
+    }
+
+    await prisma.$disconnect();
+    return new response(200, "Comments found!", comments);
+
 
 }
