@@ -54,29 +54,31 @@
          </tr>
       <% } %>
     </table>
-    <div class="flex flex-row py-6">
+
+    <div class="flex flex-col py-6 sm:flex-row">
     <% for(var i=0; i < data.length; i++) { %>
       <div class="flex justify-start px-7">
-        <div class="rounded-lg shadow-lg bg-white max-w-sm">
+        <div class="rounded-lg shadow-lg bg-[#050205] max-w-sm">
           <a href="/">
             <!-- colocar imagens no banco amanhã -->
-            <img class="rounded-t-lg" src="<%= data[i].photo %>" alt=""/>
+            <img class="rounded-t-lg" src="<%= data[i].photo %>" alt="" width="350" />
           </a>
           <div class="p-6">
             <div class="flex justify-between">
-              <h5 class="text-gray-900 text-xl font-medium mb-2"><%= data[i].name %></h5>
-              <h5 class="text-gray-900 text-xl font-medium mb-2"><%= data[i].age %> Anos</h5>
+              <h5 class="text-[#EFC68A] text-xl font-medium mb-2"><%= data[i].name %></h5>
+              <h5 class="text-[#EFC68A] text-xl font-medium mb-2"><%= data[i].age %> Anos</h5>
               
             </div>
 
-            <p class="text-gray-700 text-base mb-4">
+            <p class="text-gray-300 text-base mb-4">
               <%= data[i].description %>
             </p>
-            <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Comentar</button>
+            <!-- <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Comentar</button> -->
           </div>
         </div>
       </div>
     <% } %>
   </div>
+
  </body>
  </html>
