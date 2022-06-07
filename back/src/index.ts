@@ -3,9 +3,11 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { auth, requiresAuth } from 'express-openid-connect'
+import { auth, requiresAuth } from 'express-openid-connect';
+import { config } from "../auth/authConfig"
 
 import { getDogs, getDog, getComments, getDaily, getMedical } from "../db/searchFunctions";
+import { createDog } from "../db/postFunctions";
 
 const app = express();
 dotenv.config();
@@ -15,6 +17,7 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
+app.use(auth(config));
 
 const port = process.env.PORT || 3000;
 
@@ -54,71 +57,18 @@ app.get("/dog/medicalstatus/id/:id", async (req, res) => {
     res.send(medical.content);
 });
 
-// Teste para enviar informações para o banco de dados
+// Sends testing information to database
 app.get("/send", async (req, res) => {
     await prisma.$connect();
     const data = await createDog();
 }); 
 
-async function createDog() {
-    await prisma.$connect();
-    const dog = await prisma.dog.create({
-        data: {
-            name: "Fumaça",
-            age: 3,
-            weight: 5, //change to string
-            description: "Fumaça é um cachorro muito fofo",
-            owner_name: "João Felipi",
-            daily_status: {
-                create: [
-                    {
-                        date: new Date(),
-                        text: "Hoje o cachorro está muito feliz",
-                    },
-                    {
-                        date: new Date(),
-                        text: "Hoje o cachorro está mais feliz que ontem",
-                    }
-                ]
-            },
-            medical_status: {
-                create: {
-                    date: new Date(),
-                    text: "Vacinas aplicadas"
-                }
-            },
-            comments: {
-                create: {
-                    author_name: "Gabriel Lopes Pereira",
-                    author_class: "4INFO",
-                    author_year: "3",
-                    date: new Date(),
-                    text: "Vi ele hoje no auditório"
-                }
-            }
-    }});
-}
-
-// Auth0
-
-const config = {
-    authRequired: false,
-    auth0Logout: true,
-    secret: process.env.SECRET,
-    baseURL: process.env.BASEURL,
-    clientID: process.env.CLIENTID,
-    issuerBaseURL: process.env.ISSUERURL
-  };
-
-app.use(auth(config));
-
+// Admin route 
 app.get("/admin", requiresAuth(), (req, res) => {
     res.send(JSON.stringify(req.oidc.user));
 });
 
-
 // Running
-
 app.listen(port, () => {
     console.log( `Port: http://localhost:${ port }.` );
 });
