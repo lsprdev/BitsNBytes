@@ -4,14 +4,14 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import { auth, requiresAuth } from 'express-openid-connect';
-import { config } from "../auth/authConfig"
+import { config } from "../auth/authConfig";
 
 import { getDogs, getDog, getComments, getDaily, getMedical } from "../db/searchFunctions";
 import { createDog } from "../db/postFunctions";
 
 const app = express();
 dotenv.config();
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 app.set("view engine", "ejs");
 app.use(express.json());
