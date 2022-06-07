@@ -65,8 +65,14 @@ app.get("/send", async (req, res) => {
 
 // Admin route 
 app.get("/admin", requiresAuth(), (req, res) => {
-    res.send(JSON.stringify(req.oidc.user));
+    res.render("adminPage.ejs");
 });
+
+app.get("/admin/add", requiresAuth(), (req, res) => {
+    res.render("test.ejs");
+});
+
+
 
 // Running
 app.listen(port, () => {

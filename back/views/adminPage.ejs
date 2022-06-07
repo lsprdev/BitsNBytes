@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   
+   <!-- adding tailwindcss  -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+   <style>
+    .modal {
+      transition: opacity 0.25s ease;
+    }
+    body.modal-active {
+      overflow-x: hidden;
+      overflow-y: visible !important;
+    }
+  </style>
+   <title>MAICON</title>
+</head>
+<!-- CORES -->
+<!-- BLACK [#050205] -->
+<!-- MAICON'S COLOR [#EFC68A] -->
+<!-- DARKER MAICON'S COLOR [#B9A997] -->
+<!-- BRIGHTER MAICON'S COLOR [#D2CBB4] -->
+<!-- GREY [#A09F9F] --> 
+<!-- https://i.imgur.com/Q3wWuuh.png -->
+<body class="bg-[#D2CBB4]">
+   <nav class="bg-[#050205] shadow-xl">
+     <div class="max-w-6xl mx-auto px-4">
+         <div class="flex justify-between">
+           <!-- LOGO -->
+           <div>
+             <a href="/" class="flex items-center py-6 px-2">
+               <span class="text-[#EFC68A] font-semibold text-xl tracking-tight">MAICON</span>
+             </a>
+           </div>
+           <!-- FIM LOGO -->
+         </div>
+     </div>
+   </nav>
+   
+   <div class="flex items-center py-4 px-2">    
+    <a href="/admin/add" class="modal-open font-semibold text-[#050205] rounded bg-[#EFC68A] py-1 px-2">
+        <span><span class="text-lg">+ </span>Adicionar Animal</span>
+      </a>
+   </div>
+
+     <!--Modal-->
+  <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center ">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div> <!-- background oppacity -->
+      <div class="modal-container mx-auto z-50">
+
+        <!--Body-->
+        <div class="w-full max-w-xs">
+          <form class="bg-[#050205] rounded px-12 pt-8 pb-8 mb-8" method="post">
+
+            <div class="mb-4">
+              <label class="block text-white text-sm font-bold mb-2" for="password">
+                Foto
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Link">
+
+              <!-- <input class="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline" id="password" type="file" placeholder="Foto"> -->
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-white text-sm font-bold mb-2" for="username">
+                Nome do Animal
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Nome do Animal">
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-white text-sm font-bold mb-2">
+                Idade 
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Idade">
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-white text-sm font-bold mb-2">
+                Peso 
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Peso">
+            </div>
+
+
+            <div class="mb-4">
+              <label class="block text-white text-sm font-bold mb-2">
+                Descrição 
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="large-input" type="text" placeholder="Descrição">
+            </div>
+
+
+            <div class="mb-4">
+              <label class="block text-white text-sm font-bold mb-2" for="username">
+                Nome do Cuidador
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Cuidador">
+            </div>
+
+            <!-- save button -->
+            <div class="flex justify-center">
+              <input class="bg-[#EFC68A] text-[#050205] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Salvar">
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="mb-4">
+      <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
+        Username
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+    </div>
+    <div class="mb-6">
+      <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
+        Username
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+    </div>
+    <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        Sign In
+      </button>
+      <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+        Forgot Password?
+      </a>
+    </div> -->
+
+  <script>
+    var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+      openmodal[i].addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal()
+      })
+    }
+    
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+    
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+    	isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+    	isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+    	toggleModal()
+      }
+    };
+    
+    function toggleModal () {
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('opacity-0')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+
+  </script>
+</body>
+</html>
