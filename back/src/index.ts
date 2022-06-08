@@ -72,8 +72,9 @@ app.post("/add", requiresAuth(), (req, res) =>{
 
 
 // Admin route 
-app.get("/admin", requiresAuth(), (req, res) => {
-    res.render("adminPage.ejs");
+app.get("/admin", requiresAuth(), async (req, res) => {
+    const dogs = await getDogs();
+    res.render("adminPage.ejs", { dogs: dogs.content });
     // console.log(req.body);
 });
 
