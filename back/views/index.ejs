@@ -42,7 +42,7 @@
     <%
       var data = dogs;
     %>
-    <table>
+    <!-- <table>
       <% for(var i=0; i < data.length; i++) { %>
          <tr>
            <td> <a href="/dog/id/<%= data[i].id %>"><%= data[i].name %>: </a>  
@@ -53,7 +53,7 @@
 
          </tr>
       <% } %>
-    </table>
+    </table> -->
 
     <div class="flex flex-col py-6 sm:flex-row">
     <% for(var i=0; i < data.length; i++) { %>
@@ -66,7 +66,7 @@
           <div class="p-6">
             <div class="flex justify-between">
               <h5 class="text-[#EFC68A] text-xl font-medium mb-2"><%= data[i].name %></h5>
-              <h5 class="text-[#EFC68A] text-xl font-medium mb-2"><%= data[i].age %> Anos</h5>
+              <h5 class="text-[#EFC68A] text-xl font-medium mb-2"><%= data[i].age  %><%= data[i].age == 1 ? " Ano" : " Anos"%></h5>
               
             </div>
 

@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 import { auth, requiresAuth } from 'express-openid-connect';
 import { config } from "../auth/authConfig";
 
-import { getDogs, getDog, getComments, getDaily, getMedical } from "../db/searchFunctions";
+import { getDogs } from "../db/searchFunctions";
 import { createDog } from "../db/postFunctions";
 
 const app = express();
@@ -30,32 +30,32 @@ app.get("/", async (res, req) =>{
 });
 
 // Returns specific dog
-app.get("/dog/id/:id", async (req, res) => {
-    await prisma.$connect();
-    const dog = await getDog(req.params.id);
-    res.send(dog.content);
-});
+// app.get("/dog/id/:id", async (req, res) => {
+//     await prisma.$connect();
+//     const dog = await getDog(req.params.id);
+//     res.send(dog.content);
+// });
 
 // Returns dog-specific comments
-app.get("/dog/comments/id/:id", async (req, res) => {
-    await prisma.$connect();
-    const comments = await getComments(req.params.id);
-    res.send(comments.content);
-});
+// app.get("/dog/comments/id/:id", async (req, res) => {
+//     await prisma.$connect();
+//     const comments = await getComments(req.params.id);
+//     res.send(comments.content);
+// });
 
 // Returns dog-specific Daily Status
-app.get("/dog/dailystatus/id/:id", async (req, res) => {
-    await prisma.$connect();
-    const daily = await getDaily(req.params.id);
-    res.send(daily.content);
-});
+// app.get("/dog/dailystatus/id/:id", async (req, res) => {
+//     await prisma.$connect();
+//     const daily = await getDaily(req.params.id);
+//     res.send(daily.content);
+// });
 
 // Returns dog-specific Medical Status
-app.get("/dog/medicalstatus/id/:id", async (req, res) => {
-    await prisma.$connect();
-    const medical = await getMedical(req.params.id);
-    res.send(medical.content);
-});
+// app.get("/dog/medicalstatus/id/:id", async (req, res) => {
+//     await prisma.$connect();
+//     const medical = await getMedical(req.params.id);
+//     res.send(medical.content);
+// });
 
 // Sends testing information to database
 app.get("/send", async (req, res) => {
@@ -63,9 +63,18 @@ app.get("/send", async (req, res) => {
     const data = await createDog();
 }); 
 
+// POST
+
+app.post("/add", requiresAuth(), (req, res) =>{
+
+});
+
+
+
 // Admin route 
 app.get("/admin", requiresAuth(), (req, res) => {
     res.render("adminPage.ejs");
+    // console.log(req.body);
 });
 
 app.get("/admin/add", requiresAuth(), (req, res) => {

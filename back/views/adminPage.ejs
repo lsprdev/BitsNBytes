@@ -42,7 +42,7 @@
    </nav>
    
    <div class="flex items-center py-4 px-2">    
-    <a href="/admin/add" class="modal-open font-semibold text-[#050205] rounded bg-[#EFC68A] py-1 px-2">
+    <a href="" class="modal-open font-semibold text-[#050205] rounded bg-[#EFC68A] py-1 px-2">
         <span><span class="text-lg">+ </span>Adicionar Animal</span>
       </a>
    </div>
@@ -54,13 +54,13 @@
 
         <!--Body-->
         <div class="w-full max-w-xs">
-          <form class="bg-[#050205] rounded px-12 pt-8 pb-8 mb-8" method="post">
+          <form class="bg-[#050205] rounded px-12 pt-8 pb-8 mb-8" action="/add" method="post">
 
             <div class="mb-4">
               <label class="block text-white text-sm font-bold mb-2" for="password">
                 Foto
               </label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Link">
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="link" type="text" placeholder="Link">
 
               <!-- <input class="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline" id="password" type="file" placeholder="Foto"> -->
             </div>
@@ -69,21 +69,21 @@
               <label class="block text-white text-sm font-bold mb-2" for="username">
                 Nome do Animal
               </label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Nome do Animal">
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Nome do Animal">
             </div>
 
             <div class="mb-4">
               <label class="block text-white text-sm font-bold mb-2">
                 Idade 
               </label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Idade">
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="age" type="text" placeholder="Idade">
             </div>
 
             <div class="mb-4">
               <label class="block text-white text-sm font-bold mb-2">
                 Peso 
               </label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Peso">
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="weight" type="text" placeholder="Peso">
             </div>
 
 
@@ -91,7 +91,7 @@
               <label class="block text-white text-sm font-bold mb-2">
                 Descrição 
               </label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="large-input" type="text" placeholder="Descrição">
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="desc" type="text" placeholder="Descrição">
             </div>
 
 
@@ -99,7 +99,7 @@
               <label class="block text-white text-sm font-bold mb-2" for="username">
                 Nome do Cuidador
               </label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Cuidador">
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="owner" type="text" placeholder="Cuidador">
             </div>
 
             <!-- save button -->

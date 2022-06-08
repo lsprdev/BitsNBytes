@@ -8,37 +8,35 @@ export async function createDog() {
     await prisma.$connect();
     const dog = await prisma.dog.create({
         data: {
-            name: "Fumaça",
-            age: 3,
-            weight: 5, //change to string
-            description: "Fumaça é um cachorro muito fofo",
-            owner_name: "João Felipi",
-            daily_status: {
-                create: [
-                    {
-                        date: new Date(),
-                        text: "Hoje o cachorro está muito feliz",
-                    },
-                    {
-                        date: new Date(),
-                        text: "Hoje o cachorro está mais feliz que ontem",
-                    }
-                ]
-            },
-            medical_status: {
-                create: {
-                    date: new Date(),
-                    text: "Vacinas aplicadas"
+            photo: "https://i.imgur.com/vMfgNE6.jpg",
+            name: "Rogério",
+            age: 1,
+            weight: 1, //change to string
+            description: "Gente boa 3.0",
+            owner_name: "Gabriel Lopes Pereira",
+            daily_status: [
+                {
+                    date: "2020-06-01",
+                    status: "Dormindo",
+                    text: "Fumaça está dormindo",
+                },
+            ],
+            medical_status: [
+                {
+                    date: "2020-06-01",
+                    status: "Vacinado",
+                    text: "Fumaça está vacinado",      
                 }
-            },
-            comments: {
-                create: {
-                    author_name: "Gabriel Lopes Pereira",
+            ],
+            comments: [
+                {   
+                    author_name: "Gabriel",
                     author_class: "4INFO",
                     author_year: "3",
-                    date: new Date(),
-                    text: "Vi ele hoje no auditório"
-                }
+                    date: "2020-06-01", 
+                    text: "Vi ele noauditório",
+                }   
+            ]
             }
-    }});
-}
+    });
+};
