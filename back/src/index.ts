@@ -2,12 +2,11 @@ import { PrismaClient } from '@prisma/client';
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import bodyParser from 'body-parser';
 import { auth, requiresAuth } from 'express-openid-connect';
 import { config } from "../auth/authConfig";
 
 import { getDogs } from "../db/searchFunctions";
-import { createDog } from "../db/postFunctions";
+import { addDog } from "../db/postFunctions";
 
 const app = express();
 dotenv.config();
@@ -15,7 +14,7 @@ const prisma = new PrismaClient();
 
 app.set("view engine", "ejs");
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(auth(config));
 
@@ -57,18 +56,13 @@ app.get("/", async (res, req) =>{
 //     res.send(medical.content);
 // });
 
-// Sends testing information to database
-app.get("/send", async (req, res) => {
-    await prisma.$connect();
-    const data = await createDog();
-}); 
-
 // POST
 
-app.post("/add", requiresAuth(), (req, res) =>{
-
+app.post("/add", requiresAuth(), async (req, res) =>{
+    await prisma.$connect();
+    const data = await addDog(req.body.dogphoto, req.body.dogname, req.body.dogage, req.body.dogweight, req.body.dogdesc, req.body.dogowner);
+    res.redirect("/admin");
 });
-
 
 
 // Admin route 
@@ -77,12 +71,6 @@ app.get("/admin", requiresAuth(), async (req, res) => {
     res.render("adminPage.ejs", { dogs: dogs.content });
     // console.log(req.body);
 });
-
-app.get("/admin/add", requiresAuth(), (req, res) => {
-    res.render("test.ejs");
-});
-
-
 
 // Running
 app.listen(port, () => {

@@ -14,8 +14,8 @@ model Dog {
   id                String          @id @default(auto()) @map("_id") @db.ObjectId
   photo             String?
   name              String
-  age               Int
-  weight            Int
+  age               String
+  weight            String
   description       String
   owner_name        String
   daily_status      Json?
