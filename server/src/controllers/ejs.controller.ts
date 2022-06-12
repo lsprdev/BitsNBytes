@@ -16,10 +16,6 @@ export const admin = async (req: Request, res: Response) => {
     res.render("adminPage.ejs", { dogs: dogs.content });
 }
 
-
-
-
-
 //POST
 // ("/add" route) ejs template
 export const add = async (req: Request, res: Response) => {
