@@ -5,10 +5,8 @@ import cors from 'cors';
 import { auth, requiresAuth } from 'express-openid-connect';
 import { config } from "../auth/authConfig";
 
-import * as home from './controllers/home.controller';
-
-import { getDogs } from "../db/searchFunctions";
-import { addDog } from "../db/postFunctions";
+import * as ejs from "././controllers/ejs.controller";
+import * as api from "././controllers/api.controller";
 
 const app = express();
 dotenv.config();
@@ -22,21 +20,34 @@ app.use(auth(config));
 
 const port = process.env.PORT || 3000;
 
-// GET
+// ============================================================
+// FOR EJS VIEWS 
 
+// GET
 // Returns all dogs
-app.get("/", home.index);
+app.get("/", ejs.index);
+// Admin route 
+app.get("/admin", requiresAuth(), ejs.admin);
+// POST
+app.post("/add", requiresAuth(), ejs.add);
+// END -- FOR EJS VIEWS 
+
+// ============================================================
+// ============================================================
+// FOR API
+
+// GET
+app.get("/api/dogs", api.dogs);
+app.get("/api/dog/:dog_id", api.dog);
 
 // POST
+app.post("/api/dogadd", api.dogadd);
+// app.post("/api/dogupdate/:dog_id", api.dogupdate);
+// app.post("/api/dogdelete/:dog_id", api.dogdelete);
 
-app.post("/add", requiresAuth(), home.add);
 
-// Admin route 
-app.get("/admin", requiresAuth(), async (req, res) => {
-    const dogs = await getDogs();
-    res.render("adminPage.ejs", { dogs: dogs.content });
-    // console.log(req.body);
-});
+// END -- FOR API
+// ============================================================
 
 // Running
 app.listen(port, () => {
