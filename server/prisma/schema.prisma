@@ -18,6 +18,7 @@ model Dog {
   weight            String
   description       String
   owner_name        String
+  is_adoptable      String?
   galery            Json?
   daily_status      Json?
   medical_status    Json?
