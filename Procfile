@@ -1,1 +1,0 @@
-web: cd server && npm i && npx prisma generate && npm run start
