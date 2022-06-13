@@ -28,8 +28,11 @@ const port = process.env.PORT || 3000;
 app.get("/", ejs.index);
 // Admin route 
 app.get("/admin", requiresAuth(), ejs.admin);
+// Add dog route
+app.get("/admin/add", requiresAuth(), ejs.add);
+
 // POST
-app.post("/add", requiresAuth(), ejs.add);
+app.post("/add_dog", requiresAuth(), ejs.add_dog);
 // END -- FOR EJS VIEWS 
 
 // ============================================================
