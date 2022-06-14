@@ -52,8 +52,8 @@
             Foto
           </label>
           <input class="block mb-5 w-full text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" id="default_size" type="file">
-          
         </div>
+
 
         <div class="mb-4">
           <label class="block text-white text-sm font-bold mb-2" for="username">
@@ -93,7 +93,7 @@
         </div>
         <div class="mb-4">
           <label class="block text-white text-sm font-bold mb-2" for="username">
-            Será para doação?
+            Estará para doação?
           </label>
           <input class="" id="owner" type="radio" placeholder="Cuidador" name="dogowner"><span class="text-white ml-2 mr-2">Sim</span>
           <input class="" id="owner" type="radio" placeholder="Cuidador" name="dogowner"><span class="text-white ml-2 mr-2">Não</span>
@@ -107,6 +107,31 @@
       </form>
     </div>
   </div>
+<!-- 
+  <input type="file" id="file">
+  <img src="https://i.imgur.com/vMfgNE6.jpg" id="img">
+  <p id="url"></p> -->
+
+  <!-- <script>
+    const file = document.getElementById("file");
+    const img = document.getElementById("img");
+    const url = document.getElementById("url");
+
+    file.addEventListener("change", ev => {
+      const formdata = new FormData();
+      formdata.append("image", ev.target.files[0]);
+      fetch("https://api.imgur.com/3/image/", {
+        method: "post",
+        headers: {
+          Authorization: "Client-ID 9a1b0ca929c1d85"
+        }, 
+        body: formdata 
+      }).then(data => data.json()).then(data => {
+        img.src = data.data.link
+        url.innerText = data.data.link
+      })
+    })
+  </script> -->
 
 </body>
 </html>

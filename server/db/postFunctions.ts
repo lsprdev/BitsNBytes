@@ -42,3 +42,10 @@ export async function deleteDog (dog_id: string) {
         }
     });
 }
+
+
+// IMGUR FUNCTION
+export async function uploadImage(image: string) {
+    
+    
+}
