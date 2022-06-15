@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
+import axios from 'axios';
+import VueAxios from 'vue-axios'
 
 import {createAuth0} from "@auth0/auth0-vue";
 
@@ -14,4 +16,5 @@ app.use(
     })
 );
 
+app.use(VueAxios, axios)
 app.mount('#app')

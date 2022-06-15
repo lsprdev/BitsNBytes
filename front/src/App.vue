@@ -1,45 +1,33 @@
 <template>
-  <NavBar />
-  <IndexCards :cards="dogsData" />
+  <div>
+    <NavBar />
+    <IndexCards :cards="info" />
+  </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-import IndexCards from './components/IndexCards.vue'
+import NavBar from "./components/NavBar.vue";
+import axios from "axios";
+import IndexCards from "./components/IndexCards.vue";
+// import { response } from "express";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
-        return {
-            dogsData: [
-                {
-                    photo: "https://i.imgur.com/xu1RODe.jpg",
-                    name: "Maicon",
-                    age: "2 anos",
-                    desc: "Gente Boa",
-                },
-                {
-                    photo: "https://i.imgur.com/vMfgNE6.jpg",
-                    name: "Rogério",
-                    age: "1 anos",
-                    desc: "Gente boa 2.0",
-                },
-                {
-                    photo: "https://i.imgur.com/4tzW2ur.jpg",
-                    name: "Fumaça",
-                    age: "3 anos",
-                    desc: "Sou o Fumaça, fico pelo Campus Araquari geralmente com o meu amigo Maicon; adoro carinho e brincadeiras.",
-                },
-            ],
-        };
-    },
+    return {
+      info: [],
+    };
+  },
+  mounted() {
+    axios
+      .get("http://localhost:7777/api/dogs")
+      .then((response) => (this.info = response));
+  },
   components: {
     NavBar,
-    IndexCards
-  }
-}
+    IndexCards,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
