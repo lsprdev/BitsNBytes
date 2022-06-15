@@ -1,16 +1,15 @@
 <template>
-  <div
-    class="flex flex-col py-5 grid grid-rows-1 grid-flow-col gap-10 sm:flex-row justify-center"
+  <div 
+  class="flex flex-col py-5 grid grid-rows-2 grid-flow-col gap-5 sm:flex-row justify-center"
   >
     <div v-for="card in cards.data" :key="card.index">
       <div class="flex justify-start px-7 mb-8">
-        <div class="rounded-lg shadow-lg bg-[#15393c] max-w-sm">
+        <div class="rounded-lg shadow-lg bg-[#050205] max-w-sm">
           <a href="/">
             <!-- colocar imagens no banco amanhã -->
             <img
-              class="rounded-t-lg h-96"
+              class="rounded-t-lg h-80"
               :src="card.photo"
-              alt=""
               width="410"
             />
           </a>

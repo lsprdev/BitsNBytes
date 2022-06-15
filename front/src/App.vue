@@ -1,6 +1,7 @@
 <template>
   <div>
     <NavBar />
+    
     <IndexCards :cards="info" />
   </div>
 </template>
@@ -9,7 +10,6 @@
 import NavBar from "./components/NavBar.vue";
 import axios from "axios";
 import IndexCards from "./components/IndexCards.vue";
-// import { response } from "express";
 
 export default {
   name: "App",

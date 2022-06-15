@@ -1,5 +1,11 @@
 <template>
-  <nav class="bg-[#15393c] shadow-xl">
+<!-- CORES -->
+<!-- BLACK [#050205] -->
+<!-- MAICON'S COLOR [#EFC68A] -->
+<!-- DARKER MAICON'S COLOR [#B9A997] -->
+<!-- BRIGHTER MAICON'S COLOR [#D2CBB4] -->
+<!-- GREY [#A09F9F] --> 
+  <nav class="bg-[#050205] shadow-xl">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex justify-between">
         <!-- LOGO -->
@@ -8,7 +14,7 @@
             <img class="h-fit w-12" src="../assets/logo.png" />
             <span
               class="text-[#EFC68A] font-semibold text-xl tracking-tight px-2"
-              >Portal Animal</span
+              >MAICON</span
             >
           </a>
         </div>
