@@ -1,4 +1,6 @@
-<template><router-view></router-view></template>
+<template>
+    <div>Home</div>
+</template>
 
 <script>
 export default {};

@@ -1,4 +1,6 @@
-<template><router-view></router-view></template>
+<template>
+    <div>Adote</div>
+</template>
 
 <script>
 export default {};

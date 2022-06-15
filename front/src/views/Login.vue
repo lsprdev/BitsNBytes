@@ -1,4 +1,4 @@
-<template><router-view></router-view></template>
+<template><div>LOGIN</div></template>
 
 <script>
 export default {};
