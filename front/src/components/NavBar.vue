@@ -18,21 +18,46 @@
                 <!-- FIM LOGO -->
                 <!-- ENTRAR -->
                 <div class="flex items-center py-4 px-2">
-                    <a href="/apoie" class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300">
+
+                    <a 
+                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        href="/adote"
+                    >
                         <span>Apoie</span>
                     </a>
+
                     <a
-                        href="/adote"
                         class="py-2 px-2 mr-12 ml-12 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        href="/adote"
                     >
                         <span>Adote</span>
                     </a>
-                    <button
-                        @click="login()"
-                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+
+                    <a   
+                    
+                    class="py-2 px-2 mr-12 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                    v-if="isAuthenticated" href="/admin"
                     >
+                    
+                        <span>Painel de Controle</span>
+                    </a >
+
+
+                    <a  
+                    class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                    v-if="!isAuthenticated" @click="login()"
+                    >
+
                         <span>Entrar</span>
-                    </button>
+                    </a >
+                   
+                    <a   
+                    class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                    v-if="isAuthenticated" @click="logout()"
+                    >
+                    
+                        <span>Sair</span>
+                    </a >
                 </div>
                 <!-- FIM ENTRAR -->
             </div>
@@ -41,11 +66,22 @@
 </template>
 
 <script>
-export default {
-    methods: {
-        login() {
-            this.$auth0.loginWithRedirect();
+    import { useAuth0 } from '@auth0/auth0-vue';
+
+  export default {
+    setup() {
+      const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+
+      return {
+        login: () => {
+          loginWithRedirect();
         },
-    },
-};
+        logout: () => {
+          logout({ returnTo: window.location.origin });
+        },
+
+        isAuthenticated
+      };
+    }
+  };
 </script>
