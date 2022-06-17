@@ -10,54 +10,51 @@
             <div class="flex justify-between">
                 <!-- LOGO -->
                 <div>
-                    <a href="/" class="flex items-center py-6 px-2">
+                    <router-link to="/" class="flex items-center py-6 px-2">
                         <img class="h-fit w-12" src="../assets/logo2.png" />
                         <span class="text-[#EFC68A] font-semibold text-xl tracking-tight px-2">IF AMPARA</span>
-                    </a>
+                    </router-link>
                 </div>
                 <!-- FIM LOGO -->
                 <!-- ENTRAR -->
                 <div class="flex items-center py-4 px-2">
-
-                    <a 
+                    <router-link
                         class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
-                        href="/adote"
-                    >
-                        <span>Apoie</span>
-                    </a>
-
-                    <a
-                        class="py-2 px-2 mr-12 ml-12 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
-                        href="/adote"
+                        to="/adote"
                     >
                         <span>Adote</span>
-                    </a>
+                    </router-link>
 
-                    <a   
-                    
-                    class="py-2 px-2 mr-12 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
-                    v-if="isAuthenticated" href="/admin"
+                    <router-link
+                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        to="/apoie"
                     >
-                    
-                        <span>Painel de Controle</span>
-                    </a >
+                        <span>Apoie</span>
+                    </router-link>
 
-
-                    <a  
-                    class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
-                    v-if="!isAuthenticated" @click="login()"
+                    <router-link
+                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        to="/admin"
+                        v-if="isAuthenticated"
                     >
+                        <span>Painel de controle</span>
+                    </router-link>
 
+                    <router-link
+                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        to="/login"
+                        v-if="!isAuthenticated"
+                    >
                         <span>Entrar</span>
-                    </a >
-                   
-                    <a   
-                    class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
-                    v-if="isAuthenticated" @click="logout()"
+                    </router-link>
+
+                    <router-link
+                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        to="/logout"
+                        v-if="isAuthenticated"
                     >
-                    
                         <span>Sair</span>
-                    </a >
+                    </router-link>
                 </div>
                 <!-- FIM ENTRAR -->
             </div>
@@ -66,22 +63,15 @@
 </template>
 
 <script>
-    import { useAuth0 } from '@auth0/auth0-vue';
+import {useAuth0} from "@auth0/auth0-vue";
 
-  export default {
+export default {
     setup() {
-      const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+        const {isAuthenticated} = useAuth0();
 
-      return {
-        login: () => {
-          loginWithRedirect();
-        },
-        logout: () => {
-          logout({ returnTo: window.location.origin });
-        },
-
-        isAuthenticated
-      };
-    }
-  };
+        return {
+            isAuthenticated,
+        };
+    },
+};
 </script>

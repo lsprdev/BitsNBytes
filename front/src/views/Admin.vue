@@ -1,6 +1,5 @@
 <template>
-    <div>Admin</div>
-    
+    <div>//TODO Admin page</div>
 </template>
 
 <script>

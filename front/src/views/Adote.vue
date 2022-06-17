@@ -1,5 +1,5 @@
 <template>
-    <div>Adote</div>
+    <div>//TODO Adote page</div>
 </template>
 
 <script>

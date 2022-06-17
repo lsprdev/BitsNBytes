@@ -1,5 +1,5 @@
 <template>
-    <div>Apoie</div>
+    <div>//TODO Apoie page</div>
 </template>
 
 <script>

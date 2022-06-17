@@ -1,11 +1,14 @@
 <template>
-    <div>
-        <h1 class="flex justify-center m-6">Dentro do Campus eles encontram um lar</h1>
-    </div>
+    <div><IndexCards /></div>
 </template>
 
 <script>
-export default {};
+import IndexCards from "../components/IndexCards.vue";
+export default {
+    components: {
+        IndexCards,
+    },
+};
 </script>
 
 <style></style>

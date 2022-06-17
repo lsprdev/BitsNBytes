@@ -23,13 +23,16 @@ const routes = [
                 name: "Adote",
                 component: () => import("./views/Adote.vue"),
             },
-        ],
-    },
-
-    {
-        path: "/",
-        component: () => import("./layouts/Blank.vue"),
-        children: [
+            {
+                path: "/login",
+                name: "Login",
+                component: () => import("./views/Login.vue"),
+            },
+            {
+                path: "/logout",
+                name: "Logout",
+                component: () => import("./views/Logout.vue"),
+            },
             {
                 path: "/admin",
                 name: "Admin",
