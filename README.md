@@ -1,6 +1,6 @@
 cd server
 npm i 
 npx primas generate
-#ctr+shift+b
-#compilar 
+# ctr+shift+b
+# compilar 
 npm run start
