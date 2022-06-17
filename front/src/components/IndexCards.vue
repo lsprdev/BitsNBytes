@@ -1,7 +1,9 @@
 <template>
-    <div class="flex flex-col py-5 grid grid-rows-2 grid-flow-col gap-5 sm:flex-row justify-center">
+    <div class="flex overflow-x-auto whitespace-nowrap p-4 no-scrollbar" id="container">
+        <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control h-50 w-20" /></button>
+
         <div v-for="card in cards.data" :key="card.index">
-            <div class="flex justify-start px-3 mb-4">
+            <div class="flex justify-start px-3 m-4">
                 <div class="rounded-lg shadow-lg bg-[#15393C] max-w-sm">
                     <a href="/">
                         <!-- colocar imagens no banco amanhã -->
@@ -34,11 +36,16 @@
                 </div>
             </div>
         </div>
+        <button class="card-control right" @click="right">
+            <ChevronRightIcon class="card-control h-20 w-20" />
+        </button>
     </div>
 </template>
 
 <script>
 import axios from "axios";
+import {ChevronLeftIcon} from "@heroicons/vue/solid";
+import {ChevronRightIcon} from "@heroicons/vue/solid";
 
 export default {
     name: "App",
@@ -50,5 +57,57 @@ export default {
     mounted() {
         axios.get("http://localhost:7777/api/dogs").then((response) => (this.cards = response));
     },
+    methods: {
+        left() {
+            document.getElementById("container").scrollLeft -= 250;
+        },
+        right() {
+            document.getElementById("container").scrollLeft += 250;
+        },
+    },
+    components: {
+        ChevronLeftIcon,
+        ChevronRightIcon,
+    },
 };
 </script>
+
+<style scoped>
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+#container {
+    position: relative;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.card-control {
+    background-color: transparent;
+    border: none;
+    position: sticky;
+    height: 500px;
+    width: 70px;
+    top: calc(50% - 25px);
+    color: #efc78a2c;
+
+    transition: 0.5s;
+}
+.card-control:hover {
+    color: #efc68a;
+}
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+}
+</style>

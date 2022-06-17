@@ -91,3 +91,16 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+.carousel-inner {
+    position: relative;
+    width: 1440px;
+    height: 400px;
+    overflow: hidden;
+}
+</style>

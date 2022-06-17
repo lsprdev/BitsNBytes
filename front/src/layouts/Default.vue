@@ -1,6 +1,6 @@
 <template>
     <div>
-        <NavBar />
+        <NavBar class="drop-shadow-md" />
         <router-view></router-view>
     </div>
 </template>

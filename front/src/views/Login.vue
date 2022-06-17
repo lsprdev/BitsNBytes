@@ -1,5 +1,5 @@
 <template>
-    <div>login</div>
+    <div>Redirecionando...</div>
 </template>
 
 <script>
