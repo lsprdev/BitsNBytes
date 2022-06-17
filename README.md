@@ -1,6 +1,19 @@
+### Entra no diretório server
+```
 cd server
-npm i 
+```
+### Instala dependencias
+```
+npm i
+```
+### Gera o prima
+```
 npx primas generate
+```
+### Compilar
 # ctr+shift+b
-# compilar 
+
+### Inicia o servidor
+```
 npm run start
+```
