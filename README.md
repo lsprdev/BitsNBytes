@@ -6,7 +6,7 @@ cd server
 ```
 npm i
 ```
-### Gera o prima
+### Gera o prisma
 ```
 npx primas generate
 ```
