@@ -11,8 +11,9 @@ npm i
 npx primas generate
 ```
 ### Compilar
-# ctr+shift+b
-
+```
+ctr+shift+b
+```
 ### Inicia o servidor
 ```
 npm run start
