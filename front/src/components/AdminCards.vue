@@ -1,7 +1,6 @@
 <template>
     <div class="flex overflow-x-auto whitespace-nowrap no-scrollbar" id="container">
         <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control h-50 w-20" /></button>
-
         <div v-for="card in cards.data" :key="card.index">
             <div class="flex justify-start px-3 mb-10">
                 <div class="rounded-lg shadow-lg bg-[#15393C] max-w-sm">
