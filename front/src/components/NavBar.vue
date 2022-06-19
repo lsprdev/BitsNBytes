@@ -12,7 +12,7 @@
                 <div>
                     <router-link to="/" class="flex items-center py-6 px-2">
                         <img class="h-fit w-12" src="../assets/logo2.png" />
-                        <span class="text-[#EFC68A] font-semibold text-xl tracking-tight px-2">IF AMPARA</span>
+                        <span class="text-[#EFC68A] font-semibold text-xl tracking-tight px-2">IF ACOLHE</span>
                     </router-link>
                 </div>
                 <!-- FIM LOGO -->
