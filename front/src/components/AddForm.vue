@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center max-w-6xl mx-auto py-10">
         <div class="w-full h-full ">
-            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="/add_dog" method="post">
+            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/dogadd" return="http://localhost:8080/admin" method="post">
 
                 <div class="mb-4">
                     <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="password">
@@ -49,8 +49,8 @@
                     <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
                         Estará para doação?
                     </label>
-                    <input class="" id="owner" type="radio" placeholder="Cuidador" name="dogowner"><span class="text-[#EFC68A] ml-2 mr-2">Sim</span>
-                    <input class="" id="owner" type="radio" placeholder="Cuidador" name="dogowner"><span class="text-[#EFC68A] ml-2 mr-2">Não</span>
+                    <input class="" type="radio" name="is_adoptable" value="true"><span class="text-[#EFC68A] ml-2 mr-2">Sim</span>
+                    <input class="" type="radio" name="is_adoptable" value="false"><span class="text-[#EFC68A] ml-2 mr-2">Não</span>
                 </div>
 
                 <!-- save button -->
@@ -65,6 +65,7 @@
 </template>
 
 <script>
+// import axios from "axios";
 export default {
     name: "AddForm",
 };

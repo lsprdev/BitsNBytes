@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function addDog(dogphoto: string, dogname: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string) {
+export async function addDog(dogphoto: string, dogname: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string, is_adoptable: string) {
     await prisma.$connect();
     const dog = await prisma.dog.create({
         data: {
@@ -13,6 +13,7 @@ export async function addDog(dogphoto: string, dogname: string, dogage: string, 
             weight: dogweight, //change to string
             description: dogdesc,
             owner_name: dogowner,
+            is_adoptable: is_adoptable,
         }
     });
 };

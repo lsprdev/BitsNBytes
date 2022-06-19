@@ -22,6 +22,6 @@ export const add = async (req: Request, res: Response) => {
 //POST
 // ("/add_dog" route) ejs template
 export const add_dog = async (req: Request, res: Response) => {
-    const data = await addDog(req.body.dogphoto, req.body.dogname, req.body.dogage, req.body.dogweight, req.body.dogdesc, req.body.dogowner);
+    const data = await addDog(req.body.dogphoto, req.body.dogname, req.body.dogage, req.body.dogweight, req.body.dogdesc, req.body.dogowner, req.body.is_adoptable);
     res.redirect("/admin");
 };

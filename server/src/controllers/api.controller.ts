@@ -15,7 +15,9 @@ export const dog = async (req: Request, res: Response) => {
 }
 
 export const dogadd = async (req: Request, res: Response) => {
-    const dog = await addDog(req.body.dogphoto, req.body.dogname, req.body.dogage, req.body.dogweight, req.body.dogdesc, req.body.dogowner);
+    const dog = await addDog(req.body.dogphoto, req.body.dogname, req.body.dogage, req.body.dogweight, req.body.dogdesc, req.body.dogowner, req.body.is_adoptable);
+    res.redirect("http://localhost:8080/admin");
+
 }
 
 
