@@ -18,3 +18,19 @@ ctr+shift+b
 ```
 npm run start
 ```
+
+### Entra no diretório front
+```
+cd ../front
+```
+
+### Instala o cli-service
+```
+npm i @vue/cli-service
+
+```
+### Inicia o servidor do front
+
+```
+npm run serve
+``` 
