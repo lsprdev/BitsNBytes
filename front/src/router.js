@@ -43,6 +43,16 @@ const routes = [
                 name: "Add",
                 component: () => import("./views/Add.vue"),
             },
+            {
+                path: "admin/regd/:id",
+                name: "Registrod",
+                component: () => import("./views/Registrod.vue"),
+            },
+            {
+                path: "admin/regm/:id",
+                name: "Registrom",
+                component: () => import("./views/Registrom.vue"),
+            },
         ],
     },
 ];

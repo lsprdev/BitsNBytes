@@ -21,6 +21,7 @@
                         </p>
                         <div class="flex flex-col px-8 sm:flex-row sm:justify-between">
                             <a
+                                v-bind:href="'/admin/regd/'+ card.id"
                                 type="button"
                                 class="inline-block px-6 py-2.5 mr-1 bg-[#EFC68A] text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
                                 >Registros</a

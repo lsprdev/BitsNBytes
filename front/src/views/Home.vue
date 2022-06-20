@@ -11,7 +11,8 @@ import IndexCarousel from "../components/carousel/IndexCarousel.vue";
 export default {
     data() {
         return {
-            slides: ["https://picsum.photos/id/1032/1440/400", "https://picsum.photos/id/1033/1440/400", "https://picsum.photos/id/1037/1440/400"],
+            //140x400
+            slides: ["https://www.merck-animal-health-usa.com/wp-content/uploads/sites/54/2020/08/canine-1-cv-hero-desktop.jpg", "https://picsum.photos/id/1033/1440/400", "https://picsum.photos/id/1037/1440/400"],
         };
     },
     components: {
