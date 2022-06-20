@@ -44,6 +44,36 @@ export async function deleteDog (dog_id: string) {
     });
 }
 
+async function getRegd (dog_id: string) {
+    await prisma.$connect();
+    const regd = await prisma.dog.findUnique({
+        where: {
+            id: dog_id
+        },
+        select: {
+            daily_status: true,
+        }
+    });
+    return regd;
+}
+
+// arrumar isso
+export async function addRegd(dog_id: string, text: string) {
+    prisma.$connect;
+    const dog = await prisma.dog.update({
+        where: {
+            id: dog_id
+        },
+        data: {
+            daily_status: [
+                {
+                    text: text,
+                }
+            ]
+        }
+    });
+}
+
 
 // IMGUR FUNCTION
 export async function uploadImage(image: string) {

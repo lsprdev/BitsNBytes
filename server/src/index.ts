@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client';
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import { auth, requiresAuth } from 'express-openid-connect';
+import { auth } from 'express-openid-connect';
 import { config } from "../auth/authConfig";
 
 import * as api from "././controllers/api.controller";
@@ -30,8 +30,8 @@ app.post("/api/dogadd", api.dogadd);
 // app.post("/api/dogupdate/:dog_id", api.dogupdate);
 // app.post("/api/dogdelete/:dog_id", api.dogdelete);
 // app.post("api/commentadd/:dog_id", api.commentadd);
-// app.post("api/dstatusadd/:dog_id", api.dstatusadd);
-// app.post("api/mstatusadd/:dog_id", api.mstatusadd);
+app.post("/api/regdAdd/:dog_id", api.regdAdd);
+// app.post("api/regmAdd/:dog_id", api.mstatusadd);
 
 // END -- FOR API
 // ============================================================
