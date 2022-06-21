@@ -15,6 +15,7 @@ export async function addDog(dogphoto: string, dogname: string, dogage: string, 
             is_adoptable: is_adoptable,
         }
     });
+    await prisma.$disconnect();
 };
 
 export async function updateDog (dog_id: string, dogphoto: string, dogname: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string) {
@@ -32,6 +33,7 @@ export async function updateDog (dog_id: string, dogphoto: string, dogname: stri
             owner_name: dogowner,
         }
     });
+    await prisma.$disconnect();
 }
 
 export async function deleteDog (dog_id: string) {
@@ -41,6 +43,7 @@ export async function deleteDog (dog_id: string) {
             id: dog_id
         }
     });
+    await prisma.$disconnect();
 }
 
 // arrumar isso
@@ -53,6 +56,7 @@ export async function addRegd(dog_id: string, text: string) {
             description: text,
         }
     });
+    await prisma.$disconnect();
 }
 
 export async function addRegm(dog_id: string, text: string){
@@ -64,6 +68,7 @@ export async function addRegm(dog_id: string, text: string){
             description: text,
         }
     });
+    await prisma.$disconnect();
 }
 
 

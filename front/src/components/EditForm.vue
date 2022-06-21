@@ -77,12 +77,20 @@
                 </div>
 
                 <!-- save button -->
-                <div class="flex justify-center">
-                    <a href="/admin" class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-4 mr-2 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</a>
-                    <input class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">      
-                </div>
-
-            </form>
+                <div class="flex justify-between">
+                    <div>
+                        <!-- Cancelar -->
+                        <a href="/admin" class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</a>    
+                        <!-- Salvar -->
+                        <input class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
+                    </div>
+                    <div>  
+                        <!-- Excluir   -->
+                        <button @click="excluir(dog.id)" class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Excluir</button>
+                    </div>
+                </div>    
+           
+           </form>
         </div>
     </div>
 </template>
@@ -102,5 +110,14 @@ export default {
                 this.dog = response.data;
             })
     },
+    // Arrumar
+    methods:{
+        excluir(dog_id){
+            axios.post(`http://localhost:7777/api/dogdelete/${dog_id}`).then((response) => {
+                console.log("foi de base")
+                response;
+            })
+        }
+    }
 };
 </script>

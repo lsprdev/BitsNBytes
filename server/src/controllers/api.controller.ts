@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { getDogs, getDog } from "../../db/searchFunctions";
 import { addDog, addRegd, addRegm } from "../../db/postFunctions";
+import { dogDelete } from "../../db/deleteFunctions";
 
 export const dogs = async (req: Request, res: Response) => {
     const dogs = await getDogs();
@@ -18,6 +19,14 @@ export const dogadd = async (req: Request, res: Response) => {
 
 }
 
+
+export const dogdelete = async (req: Request, res: Response) => {
+    const dog = await dogDelete(req.params.dog_id);
+    res.redirect("http://localhost:8080/admin");
+}
+
+
+
 export const regdAdd = async (req: Request, res: Response) => {
     const dog = await addRegd(req.params.dog_id, req.body.desc);
     res.redirect("http://localhost:8080/admin");
@@ -28,7 +37,6 @@ export const regmAdd = async (req: Request, res: Response) => {
     const dog = await addRegm(req.params.dog_id, req.body.desc);
     res.redirect("http://localhost:8080/admin");
 }
-
 
 
 
