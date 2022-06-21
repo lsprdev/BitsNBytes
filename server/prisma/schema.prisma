@@ -19,8 +19,37 @@ model Dog {
   description       String
   owner_name        String
   is_adoptable      String?
-  galery            Json?
-  daily_status      Json?
-  medical_status    Json?
-  comments          Json?
+}
+
+model Daily {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  dog_id            String          
+  date              DateTime
+  status            String?
+  description       String
+}
+
+model Medical {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  dog_id            String
+  date              String
+  status            String
+  description       String
+}
+
+model Comment {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  author_name       String
+  author_class      String
+  author_year       String
+  dog_id            String  
+  text              String
+  date              String
+}
+
+model Gallery {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  dog_id            String
+  img               String[]
+  date              String
 }

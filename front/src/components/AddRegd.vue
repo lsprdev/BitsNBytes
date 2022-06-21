@@ -36,7 +36,7 @@
                     <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
                         Nome do Animal
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="text" name="rename">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="text" name="desc">
                 </div>
 
                 <!-- save button -->

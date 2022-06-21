@@ -21,7 +21,7 @@ export const dogadd = async (req: Request, res: Response) => {
 }
 
 export const regdAdd = async (req: Request, res: Response) => {
-    const dog = await addRegd(req.params.dog_id, req.body.rename);
+    const dog = await addRegd(req.params.dog_id, req.body.desc);
     res.redirect("http://localhost:8080/admin");
 
 }
