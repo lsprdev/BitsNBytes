@@ -99,7 +99,7 @@ export default {
 }
 .carousel-inner {
     position: relative;
-    width: 1440px;
+    width: 100%;
     height: 400px;
     overflow: hidden;
 }

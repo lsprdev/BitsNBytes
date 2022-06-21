@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-[#F8F7F2]">
         <NavBar class="drop-shadow-md" />
         <router-view></router-view>
     </div>

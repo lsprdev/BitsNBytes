@@ -15,6 +15,7 @@ export default {
             return this.direction === "right" ? "slide-out" : "slide-in";
         },
     },
+    
 };
 </script>
 
@@ -43,5 +44,10 @@ export default {
 }
 .slide-out-leave-to {
     transform: translateX(-100%);
+}
+
+img{
+       width: 100%;
+       height: 100%;
 }
 </style>

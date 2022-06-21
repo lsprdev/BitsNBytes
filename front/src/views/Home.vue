@@ -1,7 +1,7 @@
 <template>
     <div>
         <IndexCarousel :slides="slides" :interval="5000" controls indicators class="mt-6 drop-shadow-md" />
-        <IndexCards class="mt-6 drop-shadow-lg" />
+        <IndexCards class="mt-6 drop-shadow-lg flex justify-center min-w-1000" />
     </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     data() {
         return {
             //140x400
-            slides: ["https://www.merck-animal-health-usa.com/wp-content/uploads/sites/54/2020/08/canine-1-cv-hero-desktop.jpg", "https://picsum.photos/id/1033/1440/400", "https://picsum.photos/id/1037/1440/400"],
+            slides: ["https://www.merck-animal-health-usa.com/wp-content/uploads/sites/54/2020/08/canine-1-cv-hero-desktop.jpg", "https://picsum.photos/id/1037/2500/400", "https://picsum.photos/id/1037/2500/400"],
         };
     },
     components: {

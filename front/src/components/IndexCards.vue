@@ -1,10 +1,10 @@
-<template>
+<template >
     <div class="flex overflow-x-auto whitespace-nowrap p-4 no-scrollbar" id="container">
         <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control h-50 w-20" /></button>
 
         <div v-for="card in cards.data" :key="card.index">
-            <div class="flex justify-start px-3 m-4">
-                <div class="rounded-lg shadow-lg bg-[#15393C] max-w-sm">
+            <div class="flex justify-start px-3 m-4 ">
+                <div class="rounded-lg shadow-lg bg-[#15393C]  w-[410px]">
                     <a href="/">
                         <!-- colocar imagens no banco amanhã -->
                         <img class="rounded-t-lg h-80" :src="card.photo" width="410" />
@@ -20,7 +20,7 @@
                         <p class="text-[#EFC68A] text-base mb-4 h-20">
                             {{ card.description }}
                         </p>
-                        <div class="flex flex-col px-8 sm:flex-row sm:justify-between">
+                        <div class="flex flex-col px-8 sm:flex-row ">
                             <a
                                 type="button"
                                 class="inline-block px-6 py-2.5 mr-1 bg-[#EFC68A] text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
@@ -52,6 +52,7 @@ export default {
     data() {
         return {
             cards: [],
+            
         };
     },
     mounted() {
@@ -64,6 +65,7 @@ export default {
         right() {
             document.getElementById("container").scrollLeft += 250;
         },
+
     },
     components: {
         ChevronLeftIcon,
@@ -88,9 +90,12 @@ export default {
     position: relative;
     overflow: hidden;
     scroll-behavior: smooth;
+
+    
 }
 
 .card-control {
+    display: inherit;
     background-color: transparent;
     border: none;
     position: sticky;
@@ -109,5 +114,35 @@ export default {
 }
 .right {
     right: 0;
+
+    
+}
+
+
+
+@media screen and (min-width: 1200px) {
+.card-control {
+    display: none;
+    background-color: transparent;
+    border: none;
+    position: sticky;
+    height: 500px;
+    width: 70px;
+    top: calc(50% - 25px);
+    color: #efc78a2c;
+
+    transition: 0.5s;
+}
+#container {
+    position: relative;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    
+}
+
+
+
+
 }
 </style>
