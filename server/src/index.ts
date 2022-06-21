@@ -29,9 +29,9 @@ app.get("/api/dog/:dog_id", api.dog);
 app.post("/api/dogadd", api.dogadd);
 // app.post("/api/dogupdate/:dog_id", api.dogupdate);
 // app.post("/api/dogdelete/:dog_id", api.dogdelete);
-// app.post("api/commentadd/:dog_id", api.commentadd);
+// app.post("/api/commentadd/:dog_id", api.commentadd);
 app.post("/api/regdAdd/:dog_id", api.regdAdd);
-// app.post("api/regmAdd/:dog_id", api.mstatusadd);
+app.post("/api/regmAdd/:dog_id", api.regmAdd);
 
 // END -- FOR API
 // ============================================================

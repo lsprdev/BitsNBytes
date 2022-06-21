@@ -44,6 +44,11 @@ const routes = [
                 component: () => import("./views/Add.vue"),
             },
             {
+                path: "admin/updog/:id",
+                name: "Update",
+                component: () => import("./views/Updog.vue"),
+            },
+            {
                 path: "admin/regd/:id",
                 name: "Registrod",
                 component: () => import("./views/Registrod.vue"),

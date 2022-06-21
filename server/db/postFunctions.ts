@@ -43,12 +43,21 @@ export async function deleteDog (dog_id: string) {
     });
 }
 
-
-
 // arrumar isso
 export async function addRegd(dog_id: string, text: string) {
     prisma.$connect;
     const dog = await prisma.daily.create({
+        data: {
+            dog_id: dog_id,
+            date: new Date(),
+            description: text,
+        }
+    });
+}
+
+export async function addRegm(dog_id: string, text: string){
+    await prisma.$connect();
+    const dog = await prisma.medical.create({
         data: {
             dog_id: dog_id,
             date: new Date(),

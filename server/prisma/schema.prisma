@@ -32,16 +32,16 @@ model Daily {
 model Medical {
   id                String          @id @default(auto()) @map("_id") @db.ObjectId
   dog_id            String
-  date              String
-  status            String
+  date              DateTime
+  status            String?
   description       String
 }
 
 model Comment {
   id                String          @id @default(auto()) @map("_id") @db.ObjectId
-  author_name       String
-  author_class      String
-  author_year       String
+  author_name       String?
+  author_class      String?
+  author_year       String?
   dog_id            String  
   text              String
   date              String

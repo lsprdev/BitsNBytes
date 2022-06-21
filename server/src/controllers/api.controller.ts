@@ -1,8 +1,6 @@
 import { Request, Response } from 'express';
-import express from 'express';
-import { auth, requiresAuth } from 'express-openid-connect';
 import { getDogs, getDog } from "../../db/searchFunctions";
-import { addDog, addRegd } from "../../db/postFunctions";
+import { addDog, addRegd, addRegm } from "../../db/postFunctions";
 
 export const dogs = async (req: Request, res: Response) => {
     const dogs = await getDogs();
@@ -25,6 +23,12 @@ export const regdAdd = async (req: Request, res: Response) => {
     res.redirect("http://localhost:8080/admin");
 
 }
+
+export const regmAdd = async (req: Request, res: Response) => {
+    const dog = await addRegm(req.params.dog_id, req.body.desc);
+    res.redirect("http://localhost:8080/admin");
+}
+
 
 
 

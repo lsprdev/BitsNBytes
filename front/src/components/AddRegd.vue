@@ -1,10 +1,10 @@
 <template>
         
-      <div class="flex justify-center max-w-6xl mx-auto py-10">
+      <div class="flex justify-center max-w-6xl mx-auto">
           
         <div class="w-full h-full ">
             
-            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" v-bind:action="'http://localhost:7777/api/regdAdd/'+dog.id" method="post">
+            <form class="bg-[#15393C] rounded px-14 pt-8 pb-8 mb-8" v-bind:action="'http://localhost:7777/api/regdAdd/'+dog.id" method="post">
                 
                 <div class="flex justify-between mb-4 mr-2">
                     <div class="flex">
@@ -36,7 +36,9 @@
                     <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
                         Nome do Animal
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="text" name="desc">
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="text" name="desc"
+                    >
                 </div>
 
                 <!-- save button -->
