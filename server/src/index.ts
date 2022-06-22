@@ -30,7 +30,7 @@ app.post("/api/dogadd", api.dogadd);
 // app.post("/api/dogupdate/:dog_id", api.dogupdate);
 
 
-app.post("/api/dogdelete/:dog_id", api.dogdelete);
+app.post("/api/dogdel/:dog_id", api.dogdelete);
 
 
 // app.post("/api/commentadd/:dog_id", api.commentadd);

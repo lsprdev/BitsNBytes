@@ -64,16 +64,19 @@
                     <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
                         Estará para doação?
                     </label>
-                    <input 
-                    class="" type="radio" name="is_adoptable" value="true">
-                    <span 
-                    class="text-[#EFC68A] ml-2 mr-2">Sim</span>
 
-                    <input 
-                    class="" type="radio" name="is_adoptable" value="false">
-                    <span 
-                    class="text-[#EFC68A] ml-2 mr-2">Não</span>
-
+                    <div v-if="dog.is_adoptable === 'true'">
+                        <input class="" type="radio" name="is_adoptable" value="true" checked>
+                        <span class="text-[#EFC68A] ml-2 mr-2">Sim</span>
+                        <input class="" type="radio" name="is_adoptable" value="false">
+                    <span class="text-[#EFC68A] ml-2 mr-2">Não</span>
+                    </div>
+                    <div v-else>
+                        <input class="" type="radio" name="is_adoptable" value="true">
+                        <span class="text-[#EFC68A] ml-2 mr-2">Sim</span>
+                        <input class="" type="radio" name="is_adoptable" value="false" checked>
+                    <span class="text-[#EFC68A] ml-2 mr-2">Não</span>
+                    </div>
                 </div>
 
                 <!-- save button -->
@@ -111,11 +114,11 @@ export default {
             })
     },
     // Arrumar
-    methods:{
-        excluir(dog_id){
-            axios.post(`http://localhost:7777/api/dogdelete/${dog_id}`).then((response) => {
-                console.log("foi de base")
-                response;
+    methods: {
+        excluir(dog_id) {
+            axios.post(`http://localhost:7777/api/dogdel/${dog_id}`).then(response => {
+                this.$router.push('/admin');
+                return response.data;
             })
         }
     }
