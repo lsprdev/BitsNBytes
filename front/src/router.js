@@ -49,12 +49,12 @@ const routes = [
                 component: () => import("./views/Updog.vue"),
             },
             {
-                path: "admin/regd/:id",
+                path: "admin/diario/:id",
                 name: "Registrod",
                 component: () => import("./views/Registrod.vue"),
             },
             {
-                path: "admin/regm/:id",
+                path: "admin/consultas/:id",
                 name: "Registrom",
                 component: () => import("./views/Registrom.vue"),
             },

@@ -9,25 +9,32 @@
                 <div class="flex justify-between mb-4 mr-2">
                     <div class="flex">
                         <a
-                            v-bind:href="'/admin/regd/'+ dog.id"
+                            v-bind:href="'/admin/diario/'+ dog.id"
                             class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
                         >  
                             <span>Registro Diário</span>
                         </a>
                         <a
-                            v-bind:href="'/admin/regm/'+ dog.id"
-                            class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
-                        >
-                            <span>Registro Médico</span>
-                        </a>
-                    </div>
-                    <div class="flex">
-                        <router-link
+                            v-bind:href="'/admin/consultas/'+ dog.id"
                             class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
                             to="/admin/regm"
                         >
-                            <span>Histórico</span>
-                        </router-link>
+                            <span>Consultas</span>
+                        </a>
+                        <a
+                            v-bind:href="'/admin/consultas/'+ dog.id"
+                            class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
+                            to="/admin/regm"
+                        >
+                            <span>Vacinas</span>
+                        </a>
+                         <a
+                            v-bind:href="'/admin/consultas/'+ dog.id"
+                            class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
+                            to="/admin/regm"
+                        >
+                            <span>Pesos</span>
+                        </a>
                     </div>
                 </div>
 
