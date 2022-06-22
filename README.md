@@ -2,7 +2,7 @@
 ```
 cd server
 ```
-### Instala dependencias
+### Instala dependências
 ```
 npm i
 ```
