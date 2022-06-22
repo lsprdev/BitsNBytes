@@ -2,12 +2,14 @@
     <div>
         <IndexCarousel :slides="slides" :interval="5000" controls indicators class="mt-6 drop-shadow-md" />
         <IndexCards class="mt-6 drop-shadow-lg flex " />
+        <Footer/>
     </div>
 </template>
 
 <script>
 import IndexCards from "../components/IndexCards.vue";
 import IndexCarousel from "../components/carousel/IndexCarousel.vue";
+import Footer from "../components/Footer.vue"
 export default {
     data() {
         return {
@@ -18,6 +20,7 @@ export default {
     components: {
         IndexCards,
         IndexCarousel,
+        Footer
     },
 };
 </script>
