@@ -21,13 +21,12 @@ npm run start
 
 ### Entra no diretório front
 ```
-cd ../front
+cd front
 ```
 
-### Instala o cli-service
+### Instala dependências do front
 ```
-npm i @vue/cli-service
-
+npm i
 ```
 ### Inicia o servidor do front
 
