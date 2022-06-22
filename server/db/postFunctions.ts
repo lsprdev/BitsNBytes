@@ -18,23 +18,23 @@ export async function addDog(dogphoto: string, dogname: string, dogage: string, 
     await prisma.$disconnect();
 };
 
-export async function updateDog (dog_id: string, dogphoto: string, dogname: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string) {
+export async function updateDog(dog_id: string, dogphoto: string, dogname: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string, is_adoptable: string) {
     await prisma.$connect();
     const dog = await prisma.dog.update({
         where: {
             id: dog_id
         },
         data: {
-            photo: dogphoto,
             name: dogname,
             age: dogage,
             weight: dogweight, //change to string
             description: dogdesc,
             owner_name: dogowner,
+            is_adoptable: is_adoptable,
         }
     });
     await prisma.$disconnect();
-}
+};
 
 export async function deleteDog (dog_id: string) {
     await prisma.$connect();
@@ -45,6 +45,7 @@ export async function deleteDog (dog_id: string) {
     });
     await prisma.$disconnect();
 }
+
 
 // arrumar isso
 export async function addRegd(dog_id: string, text: string) {
@@ -70,7 +71,6 @@ export async function addRegm(dog_id: string, text: string){
     });
     await prisma.$disconnect();
 }
-
 
 // IMGUR FUNCTION
 export async function uploadImage(image: string) {

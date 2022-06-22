@@ -27,8 +27,7 @@ app.get("/api/dog/:dog_id", api.dog);
 
 // POST
 app.post("/api/dogadd", api.dogadd);
-// app.post("/api/dogupdate/:dog_id", api.dogupdate);
-
+app.post("/api/dogupdate/:dog_id", api.dogupdate);
 
 app.post("/api/dogdel/:dog_id", api.dogdelete);
 

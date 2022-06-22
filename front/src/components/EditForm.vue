@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center max-w-6xl mx-auto py-10">
         <div class="w-full h-full ">
-            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/dogadd" return="http://localhost:8080/admin" method="post">
+            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" v-bind:action="'http://localhost:7777/api/dogupdate/'+dog.id" return="http://localhost:8080/admin" method="post">
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="password">
