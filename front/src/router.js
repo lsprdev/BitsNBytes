@@ -51,12 +51,12 @@ const routes = [
             {
                 path: "admin/diario/:id",
                 name: "Registrod",
-                component: () => import("./views/Registrod.vue"),
+                component: () => import("./views/RegDiario.vue"),
             },
             {
                 path: "admin/consultas/:id",
                 name: "Registrom",
-                component: () => import("./views/Registrom.vue"),
+                component: () => import("./views/Consultas.vue"),
             },
         ],
     },
