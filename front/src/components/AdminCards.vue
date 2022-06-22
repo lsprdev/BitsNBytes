@@ -10,26 +10,26 @@
                     </a>
                     <div class="p-6">
                         <div class="flex justify-between">
-                            <h5 class="text-[#EFC68A] text-xl font-medium mb-2">
+                            <h5 class="text-white text-xl font-medium mb-2">
                                 {{ card.name }}
                             </h5>
-                            <h5 class="text-[#EFC68A] text-xl font-medium mb-2">{{ card.age }} Anos</h5>
+                            <h5 class="text-white text-xl font-medium mb-2">{{ card.age }} Anos</h5>
                         </div>
 
-                        <p class="text-[#EFC68A] text-base mb-4 h-20">
+                        <p class="text-white text-base mb-4 h-20">
                             {{ card.description }}
                         </p>
                         <div class="flex flex-col px-8 sm:flex-row sm:justify-between">
                             <a
                                 v-bind:href="'/admin/regd/'+ card.id"
                                 type="button"
-                                class="inline-block px-6 py-2.5 mr-1 bg-[#EFC68A] text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                class="inline-block px-6 py-2.5 mr-1 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
                                 >Registros</a
                             >
                             <a  
                                 v-bind:href="'/admin/updog/'+ card.id"
                                 type="button"
-                                class="inline-block px-6 py-2.5 ml-1 bg-[#EFC68A] text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                class="inline-block px-6 py-2.5 ml-1 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
                                 >Editar</a
                             >
                         </div>

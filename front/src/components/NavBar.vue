@@ -10,30 +10,31 @@
             <div class="flex justify-between">
                 <!-- LOGO -->
                 <div>
+                    <!-- White: #f8fafc -->
                     <router-link to="/" class="flex items-center py-6 px-2">
-                        <img class="h-fit w-12" src="../assets/logo2.png" />
-                        <span class="text-[#EFC68A] font-semibold text-xl tracking-tight px-2">IF ACOLHE</span>
+                        <img class="h-fit w-12" src="../assets/logo3.png" />
+                        <span class="text-white font-semibold text-xl tracking-tight px-2">IF ACOLHE</span>
                     </router-link>
                 </div>
                 <!-- FIM LOGO -->
                 <!-- ENTRAR -->
                 <div class="flex items-center py-4 px-2">
                     <router-link
-                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300"
                         to="/adote"
                     >
                         <span>Adote</span>
                     </router-link>
 
                     <router-link
-                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300"
                         to="/apoie"
                     >
                         <span>Apoie</span>
                     </router-link>
 
                     <router-link
-                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300"
                         to="/admin"
                         v-if="isAuthenticated"
                     >
@@ -41,7 +42,7 @@
                     </router-link>
 
                     <router-link
-                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300"
                         to="/login"
                         v-if="!isAuthenticated"
                     >
@@ -49,7 +50,7 @@
                     </router-link>
 
                     <router-link
-                        class="py-2 px-2 font-semibold text-[#EFC68A] rounded hover:bg-[#EFC68A] hover:text-[#15393C] transition duration-300"
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300"
                         to="/logout"
                         v-if="isAuthenticated"
                     >

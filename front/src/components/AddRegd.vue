@@ -10,13 +10,13 @@
                     <div class="flex">
                         <a
                             v-bind:href="'/admin/regd/'+ dog.id"
-                            class="bg-[#EFC68A] py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
+                            class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
                         >  
                             <span>Registro Diário</span>
                         </a>
                         <a
                             v-bind:href="'/admin/regm/'+ dog.id"
-                            class="bg-[#EFC68A] py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
+                            class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
                             to="/admin/regm"
                         >
                             <span>Registro Médico</span>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="flex">
                         <router-link
-                            class="bg-[#EFC68A] py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
+                            class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
                             to="/admin/regm"
                         >
                             <span>Histórico</span>
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
                         Nome do Animal
                     </label>
                     <input 
@@ -43,8 +43,8 @@
 
                 <!-- save button -->
                 <div class="flex justify-center">
-                    <a href="/admin" class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-4 mr-2 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</a>
-                    <input class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">      
+                    <a href="/admin" class="bg-white text-[#15393C] font-bold py-2 px-4 mr-2 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</a>
+                    <input class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">      
                 </div>
 
             </form>

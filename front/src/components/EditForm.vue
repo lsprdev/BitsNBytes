@@ -4,14 +4,14 @@
             <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/dogadd" return="http://localhost:8080/admin" method="post">
 
                 <div class="mb-4">
-                    <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="password">
+                    <label class="block text-white text-sm font-bold mb-2" for="password">
                         Foto
                     </label>
                     <input class="block mb-5 w-full text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" id="default_size" type="file">
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
                         Nome do Animal
                     </label>
                     <input 
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-[#EFC68A] text-sm font-bold mb-2">
+                    <label class="block text-white text-sm font-bold mb-2">
                         Idade 
                     </label>
                     <input 
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-[#EFC68A] text-sm font-bold mb-2">
+                    <label class="block text-white text-sm font-bold mb-2">
                         Peso 
                     </label>
                     <input 
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-[#EFC68A] text-sm font-bold mb-2">
+                    <label class="block text-white text-sm font-bold mb-2">
                         Descrição 
                     </label>
                     <input 
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
                         Nome do Cuidador
                     </label>
                     <input 
@@ -61,21 +61,21 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-[#EFC68A] text-sm font-bold mb-2" for="username">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
                         Estará para doação?
                     </label>
 
                     <div v-if="dog.is_adoptable === 'true'">
                         <input class="" type="radio" name="is_adoptable" value="true" checked>
-                        <span class="text-[#EFC68A] ml-2 mr-2">Sim</span>
+                        <span class="text-white ml-2 mr-2">Sim</span>
                         <input class="" type="radio" name="is_adoptable" value="false">
-                    <span class="text-[#EFC68A] ml-2 mr-2">Não</span>
+                    <span class="text-white ml-2 mr-2">Não</span>
                     </div>
                     <div v-else>
                         <input class="" type="radio" name="is_adoptable" value="true">
-                        <span class="text-[#EFC68A] ml-2 mr-2">Sim</span>
+                        <span class="text-white ml-2 mr-2">Sim</span>
                         <input class="" type="radio" name="is_adoptable" value="false" checked>
-                    <span class="text-[#EFC68A] ml-2 mr-2">Não</span>
+                    <span class="text-white ml-2 mr-2">Não</span>
                     </div>
                 </div>
 
@@ -83,13 +83,13 @@
                 <div class="flex justify-between">
                     <div>
                         <!-- Cancelar -->
-                        <a href="/admin" class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</a>    
+                        <a href="/admin" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</a>    
                         <!-- Salvar -->
-                        <input class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
+                        <input class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
                     </div>
                     <div>  
                         <!-- Excluir   -->
-                        <button @click="excluir(dog.id)" class="bg-[#EFC68A] text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Excluir</button>
+                        <button @click="excluir(dog.id)" class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Excluir</button>
                     </div>
                 </div>    
            
