@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center max-w-5xl mx-auto py-10">
+    <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full ">
             <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" v-bind:action="'http://localhost:7777/api/dogupdate/' + dog.id" method="post">
 
@@ -10,7 +10,7 @@
                                 Foto
                             </label>
                             <input
-                                class="block mb-2 w- h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
+                                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
                                 id="default_size" type="file">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                                 Nome do Animal
@@ -38,28 +38,6 @@
                     </div>
 
                 </div>
-
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Sexo do Animal
-                    </label>
-
-                    <select class="form-select appearance-none
-                            block
-                            w-full
-                            px-3
-                            py-2
-                            text-base
-                            font-normal
-                            text-black
-                            bg-white 
-                            rounded" name="doggender">
-                        <option value="macho">Macho</option>
-                        <option value="femea">Femea</option>
-                    </select>
-                </div>
-
-
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
