@@ -1,26 +1,28 @@
 <template>
     <div>
         <IndexCarousel :slides="slides" :interval="5000" controls indicators class="mt-6 drop-shadow-md" />
-        <IndexCards class="mt-6 drop-shadow-lg flex " />
-        <Footer/>
+        <IndexCards class="mt-6 drop-shadow-lg flex" />
     </div>
 </template>
 
 <script>
 import IndexCards from "../components/IndexCards.vue";
 import IndexCarousel from "../components/carousel/IndexCarousel.vue";
-import Footer from "../components/Footer.vue"
+
 export default {
     data() {
         return {
             //140x400
-            slides: ["https://www.merck-animal-health-usa.com/wp-content/uploads/sites/54/2020/08/canine-1-cv-hero-desktop.jpg", "https://picsum.photos/id/1037/2500/400", "https://picsum.photos/id/1037/2500/400"],
+            slides: [
+                "https://www.merck-animal-health-usa.com/wp-content/uploads/sites/54/2020/08/canine-1-cv-hero-desktop.jpg",
+                "https://picsum.photos/id/1037/2500/400",
+                "https://picsum.photos/id/1037/2500/400",
+            ],
         };
     },
     components: {
         IndexCards,
         IndexCarousel,
-        Footer
     },
 };
 </script>
