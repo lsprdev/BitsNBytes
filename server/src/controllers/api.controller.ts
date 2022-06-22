@@ -13,7 +13,8 @@ export const dog = async (req: Request, res: Response) => {
 }
 
 export const dogadd = async (req: Request, res: Response) => {
-    const dog = await addDog(req.body.dogphoto, req.body.dogname, req.body.dogage, req.body.dogweight, req.body.dogdesc, req.body.dogowner, req.body.is_adoptable);
+    const r = req.body;
+    const dog = await addDog(r.dogphoto, r.dogname, r.doggender,r.dogfur, r.dogtemp, r.dogage, r.dogweight, r.dogdesc, r.dogowner, r.is_castrated, r.is_adoptable, r.dogobs);
     res.redirect("http://localhost:8080/admin");
 
 }
@@ -24,7 +25,8 @@ export const dogdelete = async (req: Request, res: Response) => {
 }
 
 export const dogupdate = async (req: Request, res: Response) => {
-    const dog = await updateDog(req.params.dog_id, req.body.dogphoto, req.body.dogname, req.body.dogage, req.body.dogweight, req.body.dogdesc, req.body.dogowner, req.body.is_adoptable);
+    const r = req.body;
+    const dog = await updateDog(req.params.dog_id, r.dogphoto, r.dogname, r.doggender,r.dogfur, r.dogtemp, r.dogage, r.dogweight, r.dogdesc, r.dogowner, r.is_castrated, r.is_adoptable, r.dogobs);
     res.redirect("http://localhost:8080/admin");
 }
 

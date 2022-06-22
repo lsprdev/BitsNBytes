@@ -17,6 +17,39 @@
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Nome do Animal" name="dogname">
                 </div>
 
+                  <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Sexo do Animal
+                    </label>
+                    <select class="form-select appearance-none
+                            block
+                            w-full
+                            px-3
+                            py-2
+                            text-base
+                            font-normal
+                            text-black
+                            bg-white 
+                            rounded" name="doggender">
+                        <option value="macho">Macho</option>
+                        <option value="femea">Femea</option>
+                    </select>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Pelagem
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Pelagem" name="dogfur">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Temperamento
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Temperamento" name="dogtemp">
+                </div>
+
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2">
                         Idade 
@@ -45,12 +78,27 @@
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="owner" type="text" placeholder="Nome do Cuidador" name="dogowner">
                 </div>
 
+                 <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Castrado
+                    </label>
+                    <input class="" type="radio" name="is_castrated" value="true"><span class="text-white ml-2 mr-2">Sim</span>
+                    <input class="" type="radio" name="is_castrated" value="false"><span class="text-white ml-2 mr-2">Não</span>
+                </div>
+
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
                         Estará para doação?
                     </label>
                     <input class="" type="radio" name="is_adoptable" value="true"><span class="text-white ml-2 mr-2">Sim</span>
                     <input class="" type="radio" name="is_adoptable" value="false"><span class="text-white ml-2 mr-2">Não</span>
+                </div>
+
+                   <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Observações
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-4 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Observações" name="dogobs">
                 </div>
 
                 <!-- save button -->

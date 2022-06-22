@@ -2,35 +2,47 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function addDog(dogphoto: string, dogname: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string, is_adoptable: string) {
+
+export async function addDog(dogphoto: string, dogname: string, doggender: string, dogfur:string, dogtemp: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string, is_castrated: string, is_adoptable: string, dogobs: string) {
     await prisma.$connect();
     const dog = await prisma.dog.create({
         data: {
             photo: dogphoto,
             name: dogname,
+            gender: doggender,
+            fur: dogfur,
+            temperament: dogtemp,
             age: dogage,
             weight: dogweight, //change to string
             description: dogdesc,
             owner_name: dogowner,
+            is_castrated: is_castrated,
             is_adoptable: is_adoptable,
+            observations: dogobs,
         }
     });
     await prisma.$disconnect();
 };
 
-export async function updateDog(dog_id: string, dogphoto: string, dogname: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string, is_adoptable: string) {
+export async function updateDog(dog_id: string, dogphoto: string, dogname: string, doggender: string, dogfur:string, dogtemp: string, dogage: string, dogweight: string, dogdesc: string, dogowner:string, is_castrated: string, is_adoptable: string, dogobs: string) {
     await prisma.$connect();
     const dog = await prisma.dog.update({
         where: {
             id: dog_id
         },
         data: {
+            photo: dogphoto,
             name: dogname,
+            gender: doggender,
+            fur: dogfur,
+            temperament: dogtemp,
             age: dogage,
             weight: dogweight, //change to string
             description: dogdesc,
             owner_name: dogowner,
+            is_castrated: is_castrated,
             is_adoptable: is_adoptable,
+            observations: dogobs,
         }
     });
     await prisma.$disconnect();
@@ -45,6 +57,8 @@ export async function deleteDog (dog_id: string) {
     });
     await prisma.$disconnect();
 }
+
+
 
 
 // arrumar isso
