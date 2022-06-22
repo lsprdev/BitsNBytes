@@ -8,7 +8,7 @@ npm i
 ```
 ### Gera o prisma
 ```
-npx primas generate
+npx prisma generate
 ```
 ### Compilar
 ```
