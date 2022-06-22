@@ -1,35 +1,38 @@
-<template>
-    <div class="flex overflow-x-auto whitespace-nowrap no-scrollbar" id="container">
-        <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control h-50 w-20" /></button>
+<template >
+<span>
+<div class="flex overflow-hidden whitespace-nowrap p-4 no-scrollbar relative scroll-smooth snap-x" id="container">
+       
+
         <div v-for="card in cards.data" :key="card.index">
-            <div class="flex justify-start px-3 mb-10">
-                <div class="rounded-lg shadow-lg bg-[#15393C] max-w-sm">
+
+            <div class="flex  px-3 m-4 snap-center">
+                <div class="rounded-lg shadow-lg bg-[#15393C] w-[300px] lg:w-[410px]">
                     <a href="/">
                         <!-- colocar imagens no banco amanhã -->
-                        <img class="rounded-t-lg h-80" :src="card.photo" width="410" />
+                        <img class="rounded-t-lg h-80 w-full" :src="card.photo"  />
                     </a>
                     <div class="p-6">
                         <div class="flex justify-between">
                             <h5 class="text-white text-xl font-medium mb-2">
                                 {{ card.name }}
                             </h5>
-                            <h5 class="text-white text-xl font-medium mb-2">{{ card.age }} Anos</h5>
+                            <h5 class="text-white text-xl font-medium mb-2">{{ card.age }} {{ age(card.age) }}</h5>
                         </div>
 
                         <p class="text-white text-base mb-4 h-20">
                             {{ card.description }}
                         </p>
-                        <div class="flex flex-col px-8 sm:flex-row sm:justify-between">
+                         <div class="flex justify-center flex-row">
                             <a
                                 v-bind:href="'/admin/regd/'+ card.id"
                                 type="button"
-                                class="inline-block px-6 py-2.5 mr-1 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                class="inline-block px-6 py-2.5 mr-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
                                 >Registros</a
                             >
                             <a  
                                 v-bind:href="'/admin/updog/'+ card.id"
                                 type="button"
-                                class="inline-block px-6 py-2.5 ml-1 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
                                 >Editar</a
                             >
                         </div>
@@ -37,10 +40,15 @@
                 </div>
             </div>
         </div>
-        <button class="card-control right" @click="right">
-            <ChevronRightIcon class="card-control h-20 w-20" />
-        </button>
+
     </div>
+    <span>
+
+        <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control  w-20" /></button>
+        <button class="card-control right" @click="right"><ChevronRightIcon class="card-control w-20" /></button>
+    </span>
+</span>
+    
 </template>
 
 <script>
@@ -53,6 +61,7 @@ export default {
     data() {
         return {
             cards: [],
+            
         };
     },
     mounted() {
@@ -60,42 +69,39 @@ export default {
     },
     methods: {
         left() {
-            document.getElementById("container").scrollLeft -= 250;
+            document.getElementById("container").scrollLeft -= 320;
         },
         right() {
-            document.getElementById("container").scrollLeft += 250;
+            document.getElementById("container").scrollLeft += 320;
         },
+        controls(){
+            document.getElementById
+        },
+        age(age){
+            if (age > 1){
+                return "Anos"
+            }
+            else{
+                return "Ano"
+            }
+        }
+
     },
     components: {
         ChevronLeftIcon,
         ChevronRightIcon,
     },
+
 };
 </script>
 
 <style scoped>
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-#container {
-    position: relative;
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
 
 .card-control {
     background-color: transparent;
     border: none;
-    position: sticky;
-    height: 500px;
+    position: absolute;
     width: 70px;
     top: calc(50% - 25px);
     color: #efc78a2c;
@@ -110,5 +116,24 @@ export default {
 }
 .right {
     right: 0;
+
+    
 }
+
 </style>
+
+
+<!-- <div class="flex flex-col px-8 sm:flex-row sm:justify-between">
+                            <a
+                                v-bind:href="'/admin/regd/'+ card.id"
+                                type="button"
+                                class="inline-block px-6 py-2.5 mr-1 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                >Registros</a
+                            >
+                            <a  
+                                v-bind:href="'/admin/updog/'+ card.id"
+                                type="button"
+                                class="inline-block px-6 py-2.5 ml-1 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
+                                >Editar</a
+                            >
+                        </div> -->
