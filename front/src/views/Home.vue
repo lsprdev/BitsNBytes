@@ -1,7 +1,7 @@
 <template>
     <div>
         <IndexCarousel :slides="slides" :interval="5000" controls indicators class="mt-6 drop-shadow-md" />
-        <IndexCards class="mt-6 drop-shadow-lg flex justify-center min-w-1000" />
+        <IndexCards class="mt-6 drop-shadow-lg flex " />
     </div>
 </template>
 

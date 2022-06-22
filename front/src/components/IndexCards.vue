@@ -1,26 +1,28 @@
 <template >
-    <div class="flex overflow-x-auto whitespace-nowrap p-4 no-scrollbar" id="container">
-        <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control h-50 w-20" /></button>
+<span>
+<div class="flex overflow-hidden whitespace-nowrap p-4 no-scrollbar relative scroll-smooth snap-x" id="container">
+       
 
         <div v-for="card in cards.data" :key="card.index">
-            <div class="flex justify-start px-3 m-4 ">
-                <div class="rounded-lg shadow-lg bg-[#15393C]  w-[410px]">
+
+            <div class="flex  px-3 m-4 snap-center">
+                <div class="rounded-lg shadow-lg bg-[#15393C] w-[300px] lg:w-[410px]">
                     <a href="/">
                         <!-- colocar imagens no banco amanhã -->
-                        <img class="rounded-t-lg h-80" :src="card.photo" width="410" />
+                        <img class="rounded-t-lg h-80 w-full" :src="card.photo"  />
                     </a>
                     <div class="p-6">
                         <div class="flex justify-between">
                             <h5 class="text-[#EFC68A] text-xl font-medium mb-2">
                                 {{ card.name }}
                             </h5>
-                            <h5 class="text-[#EFC68A] text-xl font-medium mb-2">{{ card.age }} Anos</h5>
+                            <h5 class="text-[#EFC68A] text-xl font-medium mb-2">{{ card.age }} {{ age(card.age) }}</h5>
                         </div>
 
                         <p class="text-[#EFC68A] text-base mb-4 h-20">
                             {{ card.description }}
                         </p>
-                        <div class="flex flex-col px-8 sm:flex-row ">
+                        <div class="flex flex-row px-8 ">
                             <a
                                 type="button"
                                 class="inline-block px-6 py-2.5 mr-1 bg-[#EFC68A] text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
@@ -36,10 +38,15 @@
                 </div>
             </div>
         </div>
-        <button class="card-control right" @click="right">
-            <ChevronRightIcon class="card-control h-20 w-20" />
-        </button>
+
     </div>
+    <span>
+
+        <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control  w-20" /></button>
+        <button class="card-control right" @click="right"><ChevronRightIcon class="card-control w-20" /></button>
+    </span>
+</span>
+    
 </template>
 
 <script>
@@ -60,46 +67,39 @@ export default {
     },
     methods: {
         left() {
-            document.getElementById("container").scrollLeft -= 250;
+            document.getElementById("container").scrollLeft -= 320;
         },
         right() {
-            document.getElementById("container").scrollLeft += 250;
+            document.getElementById("container").scrollLeft += 320;
         },
+        controls(){
+            document.getElementById
+        },
+        age(age){
+            if (age > 1){
+                return "Anos"
+            }
+            else{
+                return "Ano"
+            }
+        }
 
     },
     components: {
         ChevronLeftIcon,
         ChevronRightIcon,
     },
+
 };
 </script>
 
 <style scoped>
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-#container {
-    position: relative;
-    overflow: hidden;
-    scroll-behavior: smooth;
-
-    
-}
 
 .card-control {
-    display: inherit;
     background-color: transparent;
     border: none;
-    position: sticky;
-    height: 500px;
+    position: absolute;
     width: 70px;
     top: calc(50% - 25px);
     color: #efc78a2c;
@@ -120,29 +120,5 @@ export default {
 
 
 
-@media screen and (min-width: 1200px) {
-.card-control {
-    display: none;
-    background-color: transparent;
-    border: none;
-    position: sticky;
-    height: 500px;
-    width: 70px;
-    top: calc(50% - 25px);
-    color: #efc78a2c;
 
-    transition: 0.5s;
-}
-#container {
-    position: relative;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    width: 100%;
-    
-}
-
-
-
-
-}
 </style>
