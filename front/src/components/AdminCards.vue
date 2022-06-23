@@ -104,12 +104,12 @@ export default {
     position: absolute;
     width: 70px;
     top: calc(50% - 25px);
-    color: #efc78a2c;
+    color: #8383832c;
 
     transition: 0.5s;
 }
 .card-control:hover {
-    color: #efc68a;
+    color: #f8fafc;
 }
 .left {
     left: 0;

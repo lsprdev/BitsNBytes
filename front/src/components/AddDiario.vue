@@ -28,6 +28,13 @@
                         >
                             <span>Vacinas</span>
                         </a>
+                         <a
+                            v-bind:href="'/admin/consultas/'+ dog.id"
+                            class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
+                            to="/admin/regm"
+                        >
+                            <span>Galeria</span>
+                        </a>
                     </div>
                 </div>
 

@@ -1,7 +1,10 @@
 <template>
     <div>
         <IndexCarousel :slides="slides" :interval="5000" controls indicators class="mt-6 drop-shadow-md" />
-        <IndexCards class="mt-6 drop-shadow-lg flex" />
+        
+        <h1 class="flex justify-center py-10 text-4xl text-[#15393C] font-semibold">Mascotes</h1>
+
+        <IndexCards class="flex drop-shadow-lg mb-9" />
     </div>
 </template>
 

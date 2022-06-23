@@ -1,11 +1,9 @@
 <template >
 <span>
-<div class="flex overflow-hidden whitespace-nowrap p-4 no-scrollbar relative scroll-smooth snap-x" id="container">
-       
-
+<div class="flex overflow-hidden whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
         <div v-for="card in cards.data" :key="card.index">
 
-            <div class="flex  px-3 m-4 snap-center">
+            <div class="flex px-3 m-2 snap-center">
                 <div class="rounded-lg shadow-lg bg-[#15393C] w-[300px] lg:w-[410px]">
                     <a href="/">
                         <!-- colocar imagens no banco amanhã -->
@@ -102,12 +100,12 @@ export default {
     position: absolute;
     width: 70px;
     top: calc(50% - 25px);
-    color: #efc78a2c;
+    color: #8383832c;
 
     transition: 0.5s;
 }
 .card-control:hover {
-    color: #efc68a;
+    color:  #f8fafc;
 }
 .left {
     left: 0;
@@ -117,8 +115,5 @@ export default {
 
     
 }
-
-
-
 
 </style>
