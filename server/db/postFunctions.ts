@@ -58,9 +58,6 @@ export async function deleteDog (dog_id: string) {
     await prisma.$disconnect();
 }
 
-
-
-
 // arrumar isso
 export async function addRegd(dog_id: string, text: string) {
     prisma.$connect;

@@ -5,7 +5,7 @@
 
         <div v-for="card in cards.data" :key="card.index">
 
-            <div class="flex  px-3 m-4 snap-center">
+            <div class="flex  px-3 m-4 mb-20 snap-center">
                 <div class="rounded-lg shadow-lg bg-[#15393C] w-[300px] lg:w-[410px]">
                     <a href="/">
                         <!-- colocar imagens no banco amanhã -->

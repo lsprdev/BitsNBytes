@@ -94,44 +94,44 @@
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
                         id="owner" type="text" placeholder="Nome do Cuidador" name="dogowner" v-model="dog.owner_name">
                 </div>
-
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Castrado
-                    </label>
-                    <div v-if="dog.is_castrated === 'true'">
-                        <input class="" type="radio" name="is_castrated" value="true" checked>
-                        <span class="text-white ml-2 mr-2">Sim</span>
-                        <input class="" type="radio" name="is_castrated" value="false">
-                        <span class="text-white ml-2 mr-2">Não</span>
+                <div class="flex justify-start">
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Castrado
+                        </label>
+                        <div v-if="dog.is_castrated === 'true'">
+                            <input class="" type="radio" name="is_castrated" value="true" checked>
+                            <span class="text-white ml-2 mr-2">Sim</span>
+                            <input class="" type="radio" name="is_castrated" value="false">
+                            <span class="text-white ml-2 mr-2">Não</span>
+                        </div>
+                        <div v-else>
+                            <input class="" type="radio" name="is_castrated" value="true">
+                            <span class="text-white ml-2 mr-2">Sim</span>
+                            <input class="" type="radio" name="is_castrated" value="false" checked>
+                            <span class="text-white ml-2 mr-2">Não</span>
+                        </div>
                     </div>
-                    <div v-else>
-                        <input class="" type="radio" name="is_castrated" value="true">
-                        <span class="text-white ml-2 mr-2">Sim</span>
-                        <input class="" type="radio" name="is_castrated" value="false" checked>
-                        <span class="text-white ml-2 mr-2">Não</span>
+
+                    <div class="mb-4 ml-12">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Estará para doação?
+                        </label>
+
+                        <div v-if="dog.is_adoptable === 'true'">
+                            <input class="" type="radio" name="is_adoptable" value="true" checked>
+                            <span class="text-white ml-2 mr-2">Sim</span>
+                            <input class="" type="radio" name="is_adoptable" value="false">
+                            <span class="text-white ml-2 mr-2">Não</span>
+                        </div>
+                        <div v-else>
+                            <input class="" type="radio" name="is_adoptable" value="true">
+                            <span class="text-white ml-2 mr-2">Sim</span>
+                            <input class="" type="radio" name="is_adoptable" value="false" checked>
+                            <span class="text-white ml-2 mr-2">Não</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Estará para doação?
-                    </label>
-
-                    <div v-if="dog.is_adoptable === 'true'">
-                        <input class="" type="radio" name="is_adoptable" value="true" checked>
-                        <span class="text-white ml-2 mr-2">Sim</span>
-                        <input class="" type="radio" name="is_adoptable" value="false">
-                        <span class="text-white ml-2 mr-2">Não</span>
-                    </div>
-                    <div v-else>
-                        <input class="" type="radio" name="is_adoptable" value="true">
-                        <span class="text-white ml-2 mr-2">Sim</span>
-                        <input class="" type="radio" name="is_adoptable" value="false" checked>
-                        <span class="text-white ml-2 mr-2">Não</span>
-                    </div>
-                </div>
-
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
                         Observações
@@ -142,14 +142,17 @@
                 </div>
 
                 <!-- save button -->
-                <div class="flex justify-center">
-                    <a href="/admin"
-                        class="bg-white text-[#15393C] font-bold py-2 px-4 mr-2 rounded focus:outline-none focus:shadow-outline"
-                        type="button" value="Cancelar">Cancelar</a>
-                    <input
-                        class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline"
-                        type="submit" value="Salvar">
-                </div>
+                <div class="flex justify-between">
+                        <div>
+                 
+                            <a href="/admin" class="bg-white text-[#15393C] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Cancelar">Cancelar</a>    
+            
+                            <input class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="submit" value="Salvar">                     
+                        </div>
+                        <div>  
+                            <button @click="excluir(dog.id)" class="bg-white text-[#15393C] font-bold py-2 px-6 ml-2 rounded cursor-pointer focus:outline-none focus:shadow-outline" type="button" value="Excluir">Excluir</button>
+                        </div>
+                    </div>    
 
             </form>
         </div>

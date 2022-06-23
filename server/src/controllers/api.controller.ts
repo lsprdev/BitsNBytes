@@ -21,7 +21,7 @@ export const dogadd = async (req: Request, res: Response) => {
 
 export const dogdelete = async (req: Request, res: Response) => {
     const dog = await deleteDog(req.params.dog_id);
-    res.json(dog)
+    res.json(dog);
 }
 
 export const dogupdate = async (req: Request, res: Response) => {
