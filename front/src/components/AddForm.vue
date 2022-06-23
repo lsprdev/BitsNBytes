@@ -1,13 +1,11 @@
 <template>
    <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full ">
-            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/dogadd" method="post">
+                <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/dogadd" method="post">
 
                 <div class="flex mb-4">
-                    
 
-                    <img src="https://i.imgur.com/pMoL0kJ.png" class="rounded-lg h-48 w-52" alt="Avatar" />
-
+                    <img src="https://i.imgur.com/pMoL0kJ.png" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
                     <div class="px-4">
                         <label class="block text-white text-sm font-bold" for="image">
@@ -42,7 +40,6 @@
                     </div>
 
                 </div>
-                
 
                 <div class="flex justify-start"> 
                     <div class="mb-4">
@@ -148,9 +145,33 @@
 </template>
 
 <script>
+
 // import axios from "axios";
 export default {
     name: "AddForm",
+    methods: {
+        // uploadFile() {
+        //     const file=document.getElementById('file');
+        //     const img=document.getElementById('img');
+        //     const url=document.getElementById('url');
+        //     file.addEventListener('change', ev => {
+        //         const formdata = new FormData();
+        //         formdata.append('image', ev.target.files[0]);
+        //         fetch('https://api.imgur.com/3/image', {
+        //             method: 'POST',
+        //             headers: {
+        //                 Authorization: 'Client-ID 483db59972b36f5'
+        //             },
+        //             body: formdata
+        //         }).then(data => data.json()).then(data => {
+        //             img.src = data.data.link;
+        //             url.innerHTML = data.data.link;
+        //         });
+        //     })
+
+        // }
+
+    }
 };
 
 </script>

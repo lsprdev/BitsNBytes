@@ -95,8 +95,20 @@ export async function addRegm(dog_id: string, complaint: string, appearance: str
     await prisma.$disconnect();
 }
 
-// IMGUR FUNCTION
-export async function uploadImage(image: string) {
-    
-    
+
+
+
+// Upload Image FUNCTION
+export async function uploadImage(dog_id: string, image: string) {
+    await prisma.$connect();
+    const dog = await prisma.dog.update({
+        where: {
+            id: dog_id
+        },
+        data: {
+            photo: image,
+        }
+    });
+    await prisma.$disconnect();
 }
+
