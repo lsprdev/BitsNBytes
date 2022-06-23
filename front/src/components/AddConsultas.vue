@@ -40,10 +40,148 @@
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Nome do Animal
+                        Tipo de Atendimento
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="text" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Tipo de Atendimento" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Queixa Principal
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Queixa Principal" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Aparência Geral
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Aparência Geral" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Estado de Hidratação
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Estado de Hidratação" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Mucosas
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Mucosas" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Linfonodos
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Linfonodos" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Suspeita
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Suspeita" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Peso
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Peso" name="desc"
+                    >
+                </div>
+
+                 <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Temperatura
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Temperatura" name="desc"
+                    >
+                </div>
+
+                 <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Anotações
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Anotações" name="desc"
+                    >
+                </div>
+
+                 <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Diagnóstico
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Diagnóstico" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Encaminhamento
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Encaminhamento" name="desc"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Médico
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Médico" name="desc"
+                    >
+                </div>
+                
+                    <div class="flex">
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Data
+                        </label>
+                        <input 
+                        class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="date" placeholder="Data" name="desc"
+                        >
+                    </div>
+
+                    <div class="mb-4 ml-5">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Hora
+                        </label>
+                        <input 
+                        class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="time" placeholder="Hora" name="desc"
+                        >
+                    </div>
+
+                </div>
+
+                 <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Orçamento
+                    </label>
+                    <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Orçamento" name="desc"
                     >
                 </div>
 

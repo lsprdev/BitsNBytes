@@ -4,7 +4,7 @@
         <span><span class="text-lg">+ </span>Adicionar Animal</span>
       </a>
       <div class="flex ml-5">
-        <a href="admin/add" class="font-semibold text-white rounded-lg bg-[#15393C] py-1 px-3">
+        <a href="" class="font-semibold text-white rounded-lg bg-[#15393C] py-1 px-3">
             <span><span class="text-lg">+ </span>Adicionar Responsável</span>
         </a>
       </div>
