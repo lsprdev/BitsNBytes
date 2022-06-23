@@ -38,7 +38,7 @@
         </div>
 
     </div>
-    <span>
+    <span v-if="showControls">
 
         <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control  w-20" /></button>
         <button class="card-control right" @click="right"><ChevronRightIcon class="card-control w-20" /></button>
@@ -57,6 +57,7 @@ export default {
     data() {
         return {
             cards: [],
+            showControls: true
             
         };
     },
@@ -70,9 +71,7 @@ export default {
         right() {
             document.getElementById("container").scrollLeft += 320;
         },
-        controls(){
-            document.getElementById
-        },
+       
         age(age){
             if (age > 1){
                 return "Anos"
@@ -93,6 +92,10 @@ export default {
 
 <style scoped>
 
+#container{
+    border: solid 1px;
+}
+
 
 .card-control {
     background-color: transparent;
@@ -100,7 +103,7 @@ export default {
     position: absolute;
     width: 70px;
     top: calc(50% - 25px);
-    color: #8383832c;
+    color: #ffffff8f;
 
     transition: 0.5s;
 }

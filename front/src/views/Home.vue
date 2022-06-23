@@ -4,7 +4,7 @@
         
         <h1 class="flex justify-center py-10 text-4xl text-[#15393C] font-semibold">Mascotes</h1>
 
-        <IndexCards class="flex drop-shadow-lg mb-9" />
+        <IndexCards class="flex drop-shadow-lg mb-9 p-2" />
     </div>
 </template>
 
@@ -21,7 +21,23 @@ export default {
                 "https://picsum.photos/id/1037/2500/400",
                 "https://picsum.photos/id/1037/2500/400",
             ],
+            
         };
+    },
+    methods:{
+        changeCarouseImages(){
+            if (window.screen.width < 900){
+                this.slides = [                
+                    "https://picsum.photos/id/1037/600/400",
+                    "https://picsum.photos/id/1037/600/400",
+                    "https://picsum.photos/id/1037/600/400"
+                    ]
+            }
+        }
+
+    },
+    mounted(){
+        this.changeCarouseImages()
     },
     components: {
         IndexCards,
