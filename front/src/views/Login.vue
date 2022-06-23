@@ -1,5 +1,6 @@
 <template>
     <div>Redirecionando...</div>
+    <div class="mb-96"></div>
 </template>
 
 <script>
