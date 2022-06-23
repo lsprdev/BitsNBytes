@@ -71,13 +71,27 @@ export async function addRegd(dog_id: string, text: string) {
     await prisma.$disconnect();
 }
 
-export async function addRegm(dog_id: string, text: string){
+export async function addRegm(dog_id: string, attendance_type: string, complaint: string, appearance: string, hydration_status: string, mucous: string, lymphs: string, suspicion: string, weight: string, temperature: string, anotation: string, diagnosis: string, forwarding: string, doctor: string, date: string, time: string, budget: string){
     await prisma.$connect();
     const dog = await prisma.medical.create({
         data: {
             dog_id: dog_id,
-            date: new Date(),
-            description: text,
+            attendance_type: attendance_type,
+            complaint: complaint,
+            appearance: appearance,
+            hydration_status: hydration_status,
+            mucous: mucous,
+            lymphs: lymphs,
+            suspicion: suspicion,
+            weight: weight,
+            temperature: temperature,
+            anotation: anotation,
+            diagnosis: diagnosis,
+            forwarding: forwarding,
+            doctor: doctor,
+            date: date,
+            time: time,
+            budget: budget,
         }
     });
     await prisma.$disconnect();

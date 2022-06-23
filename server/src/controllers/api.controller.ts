@@ -38,7 +38,8 @@ export const regdAdd = async (req: Request, res: Response) => {
 }
 
 export const regmAdd = async (req: Request, res: Response) => {
-    const dog = await addRegm(req.params.dog_id, req.body.desc);
+    const r = req.body;
+    const dog = await addRegm(r.dog_id, r.atendimento, r.queixa, r.aparencia, r.hidratacao, r.mucosas, r.linfonodos, r.suspeita, r.peso, r.temperatura, r.anotacoes, r.diagnostico, r.encaminhamento, r.medico, r.data, r.hora, r.orcamento);
     res.redirect("http://localhost:8080/admin");
 }
 

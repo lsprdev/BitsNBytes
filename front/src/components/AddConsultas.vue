@@ -43,7 +43,7 @@
                         Tipo de Atendimento
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Tipo de Atendimento" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Tipo de Atendimento" name="atendimento"
                     >
                 </div>
 
@@ -52,7 +52,7 @@
                         Queixa Principal
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Queixa Principal" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Queixa Principal" name="queixa"
                     >
                 </div>
 
@@ -61,7 +61,7 @@
                         Aparência Geral
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Aparência Geral" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Aparência Geral" name="aparencia"
                     >
                 </div>
 
@@ -70,7 +70,7 @@
                         Estado de Hidratação
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Estado de Hidratação" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Estado de Hidratação" name="hidratacao"
                     >
                 </div>
 
@@ -79,7 +79,7 @@
                         Mucosas
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Mucosas" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Mucosas" name="mucosas"
                     >
                 </div>
 
@@ -88,7 +88,7 @@
                         Linfonodos
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Linfonodos" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Linfonodos" name="linfonodos"
                     >
                 </div>
 
@@ -97,7 +97,7 @@
                         Suspeita
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Suspeita" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Suspeita" name="suspeita"
                     >
                 </div>
 
@@ -106,7 +106,7 @@
                         Peso
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Peso" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Peso" name="peso"
                     >
                 </div>
 
@@ -115,7 +115,7 @@
                         Temperatura
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Temperatura" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Temperatura" name="temperatura"
                     >
                 </div>
 
@@ -124,7 +124,7 @@
                         Anotações
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Anotações" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Anotações" name="anotacoes"
                     >
                 </div>
 
@@ -133,7 +133,7 @@
                         Diagnóstico
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Diagnóstico" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Diagnóstico" name="diagnostico"
                     >
                 </div>
 
@@ -142,7 +142,7 @@
                         Encaminhamento
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Encaminhamento" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Encaminhamento" name="encaminhamento"
                     >
                 </div>
 
@@ -151,7 +151,7 @@
                         Médico
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Médico" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Médico" name="medico"
                     >
                 </div>
                 
@@ -161,7 +161,7 @@
                             Data
                         </label>
                         <input 
-                        class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="date" placeholder="Data" name="desc"
+                        class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="date" placeholder="Data" name="data"
                         >
                     </div>
 
@@ -170,7 +170,7 @@
                             Hora
                         </label>
                         <input 
-                        class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="time" placeholder="Hora" name="desc"
+                        class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="time" placeholder="Hora" name="hora"
                         >
                     </div>
 
@@ -181,7 +181,7 @@
                         Orçamento
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Orçamento" name="desc"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Orçamento" name="orcamento"
                     >
                 </div>
 
