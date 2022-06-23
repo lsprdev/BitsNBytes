@@ -63,16 +63,20 @@
                             Castrado
                         </label>
                         <div v-if="dog.is_castrated === 'true'">
-                            <input class="" type="radio" name="is_castrated" value="true" checked>
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_castrated" value="false">
-                            <span class="text-white ml-2 mr-2">Não</span>
+                            <div class="flex">
+                                <input class="" type="radio" name="is_castrated" value="true" checked>
+                                <span class="text-white ml-2 mr-2">Sim</span>
+                                <input class="" type="radio" name="is_castrated" value="false">
+                                <span class="text-white ml-2 mr-2">Não</span>
+                            </div>
                         </div>
                         <div v-else>
-                            <input class="" type="radio" name="is_castrated" value="true">
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_castrated" value="false" checked>
-                            <span class="text-white ml-2 mr-2">Não</span>
+                            <div class="flex">
+                                <input class="" type="radio" name="is_castrated" value="true">
+                                <span class="text-white ml-2 mr-2">Sim</span>
+                                <input class="" type="radio" name="is_castrated" value="false" checked>
+                                <span class="text-white ml-2 mr-2">Não</span>
+                            </div>
                         </div>
                     </div>
                     </div>

@@ -41,13 +41,13 @@
 
                 </div>
 
-                <div class="flex justify-start"> 
+                <div class="flex justify-between"> 
                     <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-2">
                             Idade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
                             id="age" type="text" placeholder="Idade" name="dogage" >
                     </div>
                     <div class="mb-4 ml-10">
@@ -58,16 +58,16 @@
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
                             id="weight" type="text" placeholder="Peso" name="dogweight" >
                     </div>
-                    <div class="mb-4 ml-10">
-                         <div class="mb-4">
+                    <div class="mb-4 ml-10 py-">
                         <label class="block text-white text-sm font-bold mb-3" for="username">
-                            Castrado
+                            Castrado? 
                         </label>
+                        <div class="flex">
                             <input class="" type="radio" name="is_castrated" value="true">
                             <span class="text-white ml-2 mr-2">Sim</span>
                             <input class="" type="radio" name="is_castrated" value="false">
                             <span class="text-white ml-2 mr-2">Não</span>
-                    </div>
+                        </div>
                     </div>
                 </div>
 
@@ -94,12 +94,12 @@
                         <label class="block text-white text-sm font-bold mb-3" for="username">
                             Estará para doação?
                         </label>
-
+                        <div class="flex">
                             <input class="" type="radio" name="is_adoptable" value="true">
                             <span class="text-white ml-2 mr-2">Sim</span>
                             <input class="" type="radio" name="is_adoptable" value="false">
                             <span class="text-white ml-2 mr-2">Não</span>
-
+                        </div>
                     </div>
                 </div>
 
