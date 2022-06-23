@@ -28,27 +28,24 @@ model Dog {
 
 model Daily {
   id                String          @id @default(auto()) @map("_id") @db.ObjectId
-  dog_id            String          
-  date              DateTime
-  status            String?
-  description       String
+  dog_id            String   
+  is_fed            String?
+  qt_fed            String?
+  observations      String?       
+  date              DateTime?
 }
 
 model Medical {
   id                String          @id @default(auto()) @map("_id") @db.ObjectId
   dog_id            String?
-  attendance_type   String?
   complaint         String?
   appearance        String?
   hydration_status  String?
-  mucous            String?
-  lymphs            String?
   suspicion         String?
   weight            String?
   temperature       String?
   anotation         String?
   diagnosis         String?
-  forwarding        String?
   doctor            String?
   date              String?
   time              String?

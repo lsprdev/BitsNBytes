@@ -40,15 +40,6 @@
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Tipo de Atendimento
-                    </label>
-                    <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Tipo de Atendimento" name="atendimento"
-                    >
-                </div>
-
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
                         Queixa Principal
                     </label>
                     <input 
@@ -76,49 +67,31 @@
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Mucosas
-                    </label>
-                    <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Mucosas" name="mucosas"
-                    >
-                </div>
-
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Linfonodos
-                    </label>
-                    <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Linfonodos" name="linfonodos"
-                    >
-                </div>
-
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
                         Suspeita
                     </label>
                     <input 
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Suspeita" name="suspeita"
                     >
                 </div>
+                <div class="flex">
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Peso
+                        </label>
+                        <input 
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Peso" name="peso"
+                        >
+                    </div>
 
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Peso
-                    </label>
-                    <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Peso" name="peso"
-                    >
+                    <div class="mb-4 ml-5">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Temperatura
+                        </label>
+                        <input 
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Temperatura" name="temperatura"
+                        >
+                    </div>
                 </div>
-
-                 <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Temperatura
-                    </label>
-                    <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Temperatura" name="temperatura"
-                    >
-                </div>
-
                  <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
                         Anotações
@@ -139,15 +112,6 @@
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Encaminhamento
-                    </label>
-                    <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Encaminhamento" name="encaminhamento"
-                    >
-                </div>
-
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
                         Médico
                     </label>
                     <input 
@@ -155,7 +119,7 @@
                     >
                 </div>
                 
-                    <div class="flex">
+                <div class="flex">
                     <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-2" for="username">
                             Data

@@ -38,12 +38,29 @@
                     </div>
                 </div>
 
+                <div class="mb-2">
+                    <label class="block text-white text-sm font-bold mb-3" for="username">
+                            Já foi alimentado hoje?
+                    </label>
+                        <input class="" type="radio" name="is_fed" value="true">
+                        <span class="text-white ml-2 mr-2">Sim</span>
+                        <input class="" type="radio" name="is_fed" value="false">
+                        <span class="text-white ml-2 mr-2">Não</span>
+                </div>
+                
+                <label class="block text-white text-sm font-bold mb-2" for="username">
+                    Se sim, quantas vezes?
+                </label>
+                    <input
+                        class="shadow appearance-none border rounded w-15 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                        id="name" type="text" placeholder="Alimentação" name="qt_fed" >
+
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Nome do Animal
+                        Observação
                     </label>
                     <input 
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="text" name="desc"
+                    class="shadow appearance-none border rounded h-16 w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Observação" name="obs"
                     >
                 </div>
 
