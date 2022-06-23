@@ -38,43 +38,83 @@
                     </div>
 
                 </div>
+                
 
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Pelagem
-                    </label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="name" type="text" placeholder="Pelagem" name="dogfur" v-model="dog.fur">
+                <div class="flex justify-start"> 
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2">
+                            Idade
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="age" type="text" placeholder="Idade" name="dogage" v-model="dog.age">
+                    </div>
+                    <div class="mb-4 ml-10">
+                        <label class="block text-white text-sm font-bold mb-2">
+                            Peso
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="weight" type="text" placeholder="Peso" name="dogweight" v-model="dog.weight">
+                    </div>
+                    <div class="mb-4 ml-10">
+                         <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-3" for="username">
+                            Castrado
+                        </label>
+                        <div v-if="dog.is_castrated === 'true'">
+                            <input class="" type="radio" name="is_castrated" value="true" checked>
+                            <span class="text-white ml-2 mr-2">Sim</span>
+                            <input class="" type="radio" name="is_castrated" value="false">
+                            <span class="text-white ml-2 mr-2">Não</span>
+                        </div>
+                        <div v-else>
+                            <input class="" type="radio" name="is_castrated" value="true">
+                            <span class="text-white ml-2 mr-2">Sim</span>
+                            <input class="" type="radio" name="is_castrated" value="false" checked>
+                            <span class="text-white ml-2 mr-2">Não</span>
+                        </div>
+                    </div>
+                    </div>
                 </div>
 
+                  <div class="flex justify-start"> 
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Pelagem
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="Pelagem" name="dogfur" v-model="dog.fur">
+                    </div>
+                    <div class="mb-4 ml-10">
+                            <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Temperamento
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="Temperamento" name="dogtemp" v-model="dog.temperament">
+                    </div>
 
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="username">
-                        Temperamento
-                    </label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="name" type="text" placeholder="Temperamento" name="dogtemp" v-model="dog.temperament">
-                </div>
 
+                     <div class="mb-4 ml-10 py-">
+                        <label class="block text-white text-sm font-bold mb-3" for="username">
+                            Estará para doação?
+                        </label>
 
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2">
-                        Idade
-                    </label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="age" type="text" placeholder="Idade" name="dogage" v-model="dog.age">
-                </div>
-
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2">
-                        Peso
-                    </label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="weight" type="text" placeholder="Peso" name="dogweight" v-model="dog.weight">
+                        <div v-if="dog.is_adoptable === 'true'">
+                            <input class="" type="radio" name="is_adoptable" value="true" checked>
+                            <span class="text-white ml-2 mr-2">Sim</span>
+                            <input class="" type="radio" name="is_adoptable" value="false">
+                            <span class="text-white ml-2 mr-2">Não</span>
+                        </div>
+                        <div v-else>
+                            <input class="" type="radio" name="is_adoptable" value="true">
+                            <span class="text-white ml-2 mr-2">Sim</span>
+                            <input class="" type="radio" name="is_adoptable" value="false" checked>
+                            <span class="text-white ml-2 mr-2">Não</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mb-4">
@@ -93,44 +133,6 @@
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
                         id="owner" type="text" placeholder="Nome do Cuidador" name="dogowner" v-model="dog.owner_name">
-                </div>
-                <div class="flex justify-start">
-                    <div class="mb-4">
-                        <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Castrado
-                        </label>
-                        <div v-if="dog.is_castrated === 'true'">
-                            <input class="" type="radio" name="is_castrated" value="true" checked>
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_castrated" value="false">
-                            <span class="text-white ml-2 mr-2">Não</span>
-                        </div>
-                        <div v-else>
-                            <input class="" type="radio" name="is_castrated" value="true">
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_castrated" value="false" checked>
-                            <span class="text-white ml-2 mr-2">Não</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-4 ml-12">
-                        <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Estará para doação?
-                        </label>
-
-                        <div v-if="dog.is_adoptable === 'true'">
-                            <input class="" type="radio" name="is_adoptable" value="true" checked>
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_adoptable" value="false">
-                            <span class="text-white ml-2 mr-2">Não</span>
-                        </div>
-                        <div v-else>
-                            <input class="" type="radio" name="is_adoptable" value="true">
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_adoptable" value="false" checked>
-                            <span class="text-white ml-2 mr-2">Não</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
