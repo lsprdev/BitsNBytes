@@ -1,4 +1,5 @@
 <template>
+    <h1 class="flex justify-center py-10 text-5xl text-[#15393C] font-semibold">Galeria do </h1>
     <span>
         <div class="flex overflow-hidden whitespace-nowrap no-scrollbar relative scroll-smooth snap-x mb-10" id="container">
             <div v-for="card in cards.data" :key="card.index">

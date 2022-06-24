@@ -8,33 +8,33 @@
                 
                 <div class="flex justify-between mb-4 mr-2">
                     <div class="flex">
-                        <a
-                            v-bind:href="'/admin/diario/'+ dog.id"
+
+                        <router-link 
+                            v-bind:to="'/admin/diario/'+ dog.id"
                             class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
                         >  
                             <span>Registro Diário</span>
-                        </a>
-                        <a
-                            v-bind:href="'/admin/consultas/'+ dog.id"
+                        </router-link>
+
+                        <router-link
+                            v-bind:to="'/admin/consultas/'+ dog.id"
                             class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
-                            to="/admin/regm"
                         >
                             <span>Consultas</span>
-                        </a>
-                        <a
-                            v-bind:href="'/admin/consultas/'+ dog.id"
+                        </router-link>
+
+                        <router-link
+                            v-bind:to="'/admin/vacinas/'+ dog.id"
                             class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
-                            to="/admin/regm"
                         >
                             <span>Vacinas</span>
-                        </a>
-                            <a
-                            v-bind:href="'/admin/consultas/'+ dog.id"
+                        </router-link>
+                        <router-link
+                            v-bind:to="'/admin/galeria/'+ dog.id"
                             class="bg-white py-2 px-2 ml-2 font-semibold text-[#15393C] rounded"
-                            to="/admin/regm"
                         >
                             <span>Galeria</span>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
 

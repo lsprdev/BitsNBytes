@@ -70,6 +70,16 @@ const routes = [
                 name: "Registrom",
                 component: () => import("./views/Consultas.vue"),
             },
+            {
+                path: "/admin/vacinas/:id",
+                name: "Vacinas",
+                component: () => import("./views/Vacinas.vue"),
+            },
+            {
+                path: "/admin/galeria/:id",
+                name: "GaleriaAdmin",
+                component: () => import("./views/GaleriaAdmin.vue"),
+            },
         ],
     },
 ];

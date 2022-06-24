@@ -37,23 +37,45 @@
                         </router-link>
                     </div>
                 </div>
-
-                <div class="mb-2">
-                    <label class="block text-white text-sm font-bold mb-3" for="username">
-                            Já foi alimentado hoje?
-                    </label>
-                        <input class="" type="radio" name="is_fed" value="true">
-                        <span class="text-white ml-2 mr-2">Sim</span>
-                        <input class="" type="radio" name="is_fed" value="false">
-                        <span class="text-white ml-2 mr-2">Não</span>
-                </div>
                 
-                <label class="block text-white text-sm font-bold mb-2" for="username">
-                    Se sim, quantas vezes?
-                </label>
-                    <input
-                        class="shadow appearance-none border rounded w-15 py-2 px-3 mb-2 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                        id="name" type="text" placeholder="Alimentação" name="qt_fed" >
+                <div>
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Medicamento Aplicado
+                    </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="Alimentação" name="qt_fed" >
+                </div>
+
+                <div class="flex">
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Data da aplicação
+                        </label>
+                        <input 
+                        class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="date" placeholder="Data" name="data"
+                        >
+                    </div>
+
+                    <div class="mb-4 ml-5">
+                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                            Próxima aplicação
+                        </label>
+                        <input 
+                        class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline" type="date" placeholder="Hora" name="hora"
+                        >
+                    </div>
+
+                </div>
+
+                <div>
+                    <label class="block text-white text-sm font-bold mb-2" for="username">
+                        Veterinário Responsável
+                    </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="Veterinário" name="qt_fed" >
+                </div>
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
