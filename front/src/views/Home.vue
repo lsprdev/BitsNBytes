@@ -17,9 +17,9 @@ export default {
         return {
             //140x400
             slides: [
-                "https://i.imgur.com/iS0dEfx.jpg",
-                "https://picsum.photos/id/1037/2500/400",
-                "https://picsum.photos/id/1037/2500/400",
+                "https://i.imgur.com/8GDk8GT.png",
+                "https://i.imgur.com/XHiew9b.jpg",
+                "https://i.imgur.com/7aGRQwe.png",
             ],
             
         };
@@ -28,9 +28,9 @@ export default {
         changeCarouseImages(){
             if (window.screen.width < 900){
                 this.slides = [                
-                    "https://i.imgur.com/iS0dEfx.jpg",
-                    "https://picsum.photos/id/1037/600/400",
-                    "https://picsum.photos/id/1037/600/400"
+                    "https://i.imgur.com/8GDk8GT.png",
+                    "https://i.imgur.com/XHiew9b.jpg",
+                    "https://i.imgur.com/7aGRQwe.png",
                     ]
             }
         }
