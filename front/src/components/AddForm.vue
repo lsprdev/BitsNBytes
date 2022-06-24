@@ -1,19 +1,25 @@
 <template>
    <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full ">
+
+                <p>{{ image }}</p>
+
                 <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" action="http://localhost:7777/api/dogadd" method="post">
 
                 <div class="flex mb-4">
 
-                    <img src="https://i.imgur.com/pMoL0kJ.png" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
+                    <img src="../assets/avatar.png" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
                     <div class="px-4">
                         <label class="block text-white text-sm font-bold" for="image">
                                 Foto
                             </label>
                             <input
-                                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none"
-                                id="default_size" type="file">
+                                type="file"
+                                class="block mb-2 w-96 h-7 text-sm text-black-900 bg-white rounded border border-white cursor-pointer dark:text-gray-400 focus:outline-none" 
+                                @change="uploadImage($event.target.files[0])"
+                                accept="image/*"
+                                >
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                                 Nome do Animal
                             </label>
@@ -145,31 +151,40 @@
 </template>
 
 <script>
-
-// import axios from "axios";
+// import axios from 'axios';
 export default {
     name: "AddForm",
+    
+    data() {
+        return {
+            image: "",
+        };
+    },
     methods: {
-        // uploadFile() {
-        //     const file=document.getElementById('file');
-        //     const img=document.getElementById('img');
-        //     const url=document.getElementById('url');
-        //     file.addEventListener('change', ev => {
-        //         const formdata = new FormData();
-        //         formdata.append('image', ev.target.files[0]);
-        //         fetch('https://api.imgur.com/3/image', {
-        //             method: 'POST',
-        //             headers: {
-        //                 Authorization: 'Client-ID 483db59972b36f5'
-        //             },
-        //             body: formdata
-        //         }).then(data => data.json()).then(data => {
-        //             img.src = data.data.link;
-        //             url.innerHTML = data.data.link;
-        //         });
-        //     })
+        uploadImage(image) {
+            
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "Client-ID 483db59972b36f5");
 
-        // }
+            var formdata = new FormData();
+            formdata.append("image", image);
+
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: formdata,
+            redirect: 'follow'
+            };
+
+            fetch("https://api.imgur.com/3/image", requestOptions)
+
+            .then(data => data.json()).then(data => {
+                this.image = data.data.link;
+            })
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+
+        }
 
     }
 };
