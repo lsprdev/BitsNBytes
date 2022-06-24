@@ -20,9 +20,7 @@
                     <!-- FIM LOGO -->
                     <!-- ENTRAR -->
                     <div class="flex items-center py-4 px-2" v-if="!showMenu">
-                        <router-link class="py-2 px-6 font-semibold text-white rounded hover:bg-[#ffffff11] transition duration-300 mx-1" to="/">
-                            <span>Página inicial</span>
-                        </router-link>
+                        
                         <router-link class="py-2 px-6 font-semibold text-white rounded hover:bg-[#ffffff11] transition duration-300 mx-1" to="/adote">
                             <span>Adote</span>
                         </router-link>
