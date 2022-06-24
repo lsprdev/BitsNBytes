@@ -8,7 +8,7 @@
 
                 <div class="flex mb-4">
 
-                    <img src="../assets/avatar.png" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
+                    <img :src="image" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
                     <div class="px-4">
                         <label class="block text-white text-sm font-bold" for="image">
@@ -47,14 +47,14 @@
 
                 </div>
 
-                <div class="flex justify-between"> 
+                <div class="flex justify-start"> 
                     <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-2">
                             Idade
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="age" type="text" placeholder="Idade" name="dogage" >
+                            class="shadow appearance-none border rounded w-15 py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
+                            id="age" type="text" placeholder="Idade" name="dogage">
                     </div>
                     <div class="mb-4 ml-10">
                         <label class="block text-white text-sm font-bold mb-2">
@@ -62,20 +62,23 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-black-900 leading-tight focus:outline-none focus:shadow-outline"
-                            id="weight" type="text" placeholder="Peso" name="dogweight" >
+                            id="weight" type="text" placeholder="Peso" name="dogweight">
                     </div>
-                    <div class="mb-4 ml-10 py-">
+                    <div class="mb-4 ml-10">
+                         <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-3" for="username">
-                            Castrado? 
+                            Castrado
                         </label>
-                        <div class="flex">
-                            <input class="" type="radio" name="is_castrated" value="true">
-                            <span class="text-white ml-2 mr-2">Sim</span>
-                            <input class="" type="radio" name="is_castrated" value="false">
-                            <span class="text-white ml-2 mr-2">Não</span>
+                            <div class="flex">
+                                <input class="" type="radio" name="is_castrated" value="true" >
+                                <span class="text-white ml-2 mr-2">Sim</span>
+                                <input class="" type="radio" name="is_castrated" value="false">
+                                <span class="text-white ml-2 mr-2">Não</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    </div>
+
 
                   <div class="flex justify-start"> 
                     <div class="mb-4">
