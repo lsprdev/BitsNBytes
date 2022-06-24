@@ -3,7 +3,7 @@
         <div class="flex overflow-hidden whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
                 <div class="flex px-3 m-2 snap-center">
-                    <div class="rounded-lg shadow-lg bg-[#15393C] w-[300px] lg:w-[410px]">
+                    <div class="rounded-lg shadow-md bg-[#15393C] w-[300px] lg:w-[410px]">
                         <a href="/">
                             <!-- colocar imagens no banco amanhã -->
                             <img class="rounded-t-lg h-80 w-full" :src="card.photo" />
@@ -24,13 +24,14 @@
                                     v-bind:to="'/comentar/' + card.id"
                                     type="button"
                                     class="inline-block px-6 py-2.5 mr-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                    >Comentar</router-link>
+                                    >Comentar</router-link
+                                >
                                 <router-link
                                     v-bind:to="'/galeria/' + card.id"
                                     type="button"
                                     class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                    >Galeria</router-link>
-
+                                    >Galeria</router-link
+                                >
                             </div>
                         </div>
                     </div>
@@ -90,12 +91,12 @@ export default {
     position: absolute;
     width: 70px;
     top: calc(50% - 25px);
-    color: #ffffff8f;
+    color: #15393c81;
 
     transition: 0.5s;
 }
 .card-control:hover {
-    color: #f8fafc;
+    color: #15393c;
 }
 .left {
     left: 0;

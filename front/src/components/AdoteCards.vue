@@ -1,5 +1,5 @@
 <template>
-    <span>
+    <span class="flex justify-center">
         <div class="flex overflow-hidden whitespace-nowrap no-scrollbar relative scroll-smooth snap-x" id="container">
             <div v-for="card in cards.data" :key="card.index">
                 <div class="flex px-3 m-2 snap-center">
@@ -24,17 +24,17 @@
                 </div>
             </div>
         </div>
-        <span v-if="showControls">
+        <!-- <span v-if="showControls">
             <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control w-20" /></button>
             <button class="card-control right" @click="right"><ChevronRightIcon class="card-control w-20" /></button>
-        </span>
+        </span> -->
     </span>
 </template>
 
 <script>
 import axios from "axios";
-import {ChevronLeftIcon} from "@heroicons/vue/solid";
-import {ChevronRightIcon} from "@heroicons/vue/solid";
+// import {ChevronLeftIcon} from "@heroicons/vue/solid";
+// import {ChevronRightIcon} from "@heroicons/vue/solid";
 
 export default {
     name: "App",
@@ -64,8 +64,8 @@ export default {
         },
     },
     components: {
-        ChevronLeftIcon,
-        ChevronRightIcon,
+        // ChevronLeftIcon,
+        // ChevronRightIcon,
     },
 };
 </script>
