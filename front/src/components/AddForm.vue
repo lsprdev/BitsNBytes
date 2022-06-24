@@ -8,7 +8,7 @@
 
                 <div class="flex mb-4">
 
-                    <img :src="image" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
+                    <img src="https://i.imgur.com/pMoL0kJ.png" class="rounded-lg h-48 w-52" alt="Avatar" id="img" />
 
                     <div class="px-4">
                         <label class="block text-white text-sm font-bold" for="image">

@@ -1,14 +1,17 @@
 <template>
     <h1 class="flex justify-center py-10 text-5xl text-[#15393C] font-semibold"> Apoie</h1>
-    <div class="grid grid-cols-2 ml-16">
-        <h2 class="text-2xl justify-right text-justify px-2 text-[#15393C]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </h2>
-        <div class="grid grid-cols-3 pb-12">
-            <div></div>
-            <img src="../assets/pix.png" class="">
-        </div>
+
+    <div class="flex justify-center">
+        <img src="../assets/pix.png">
     </div>
     
+        <h1 class="flex justify-center py-6 text-2xl text-[#15393C] font-semibold">Nos ajude a manter a vida dos cães.</h1>
+        
+    <div class="mb-7">
+        <h1 class="flex justify-center py-3 text-2xl text-[#15393C] font-semibold">Deseja doar alguma outra coisa? Nos envie um email.</h1>
+        <h1 class="flex justify-center text-2xl text-[#15393C] font-semibold">ifacolhe@proton.me</h1>
+    </div>
+
 </template>
 
 <script>
