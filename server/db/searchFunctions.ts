@@ -32,3 +32,14 @@ export async function getDog(dog_id: string) {
     await prisma.$disconnect();
     return new response(200, `Dog ${dog_id} found!`, dog);
 }
+
+export async function getAdoptable() {
+    await prisma.$connect();
+    const dog = await prisma.dog.findMany({
+        where: {
+            is_adoptable: "true"
+        }
+    });
+    await prisma.$disconnect();
+    return new response(200, "Dogs found", dog);
+}

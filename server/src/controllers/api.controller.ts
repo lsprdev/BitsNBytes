@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { getDogs, getDog } from "../../db/searchFunctions";
+import { getDogs, getDog, getAdoptable } from "../../db/searchFunctions";
 import { addDog, addRegd, addRegm, deleteDog, updateDog } from "../../db/postFunctions";
 
 export const dogs = async (req: Request, res: Response) => {
@@ -18,6 +18,12 @@ export const dogadd = async (req: Request, res: Response) => {
     res.redirect("http://localhost:8080/admin");
 
 }
+
+export const dogadoptable = async (req: Request, res: Response) => {
+    const dogs = await getAdoptable();
+    res.json(dogs.content);
+}
+
 
 export const dogdelete = async (req: Request, res: Response) => {
     const dog = await deleteDog(req.params.dog_id);

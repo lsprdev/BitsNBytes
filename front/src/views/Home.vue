@@ -17,7 +17,7 @@ export default {
         return {
             //140x400
             slides: [
-                "https://www.merck-animal-health-usa.com/wp-content/uploads/sites/54/2020/08/canine-1-cv-hero-desktop.jpg",
+                "https://i.imgur.com/iS0dEfx.jpg",
                 "https://picsum.photos/id/1037/2500/400",
                 "https://picsum.photos/id/1037/2500/400",
             ],
@@ -28,7 +28,7 @@ export default {
         changeCarouseImages(){
             if (window.screen.width < 900){
                 this.slides = [                
-                    "https://picsum.photos/id/1037/600/400",
+                    "https://i.imgur.com/iS0dEfx.jpg",
                     "https://picsum.photos/id/1037/600/400",
                     "https://picsum.photos/id/1037/600/400"
                     ]

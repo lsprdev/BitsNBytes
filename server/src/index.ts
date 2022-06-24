@@ -24,6 +24,8 @@ const port = process.env.PORT || 3000;
 // GET
 app.get("/api/dogs", api.dogs);
 app.get("/api/dog/:dog_id", api.dog);
+app.get("/api/adoptable", api.dogadoptable);
+
 
 // POST
 app.post("/api/dogadd", api.dogadd);
