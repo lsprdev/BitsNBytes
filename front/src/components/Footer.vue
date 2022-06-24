@@ -38,16 +38,72 @@
           </h2>
           <ul class="mb-6 space-y-4 text-l list-none">
             <li>
-              <a class=" py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2" href="/">Home</a>
+              <a
+                class="
+                  py-2
+                  px-6
+                  font-semibold
+                  text-white
+                  rounded
+                  hover:bg-[#ffffff11]
+                  transition
+                  duration-300
+                  mx-1
+                "
+                href="/"
+                >Home</a
+              >
             </li>
             <li>
-              <a class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2" href="/adote">Adote</a>
+              <a
+                class="
+                  py-2
+                  px-6
+                  font-semibold
+                  text-white
+                  rounded
+                  hover:bg-[#ffffff11]
+                  transition
+                  duration-300
+                  mx-1
+                "
+                href="/adote"
+                >Adote</a
+              >
             </li>
             <li>
-              <a class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2" href="/apoie">Apoie</a>
+              <a
+                class="
+                  py-2
+                  px-6
+                  font-semibold
+                  text-white
+                  rounded
+                  hover:bg-[#ffffff11]
+                  transition
+                  duration-300
+                  mx-1
+                "
+                href="/apoie"
+                >Apoie</a
+              >
             </li>
             <li>
-              <a class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2" href="/">Galeria</a>
+              <a
+                class="
+                  py-2
+                  px-6
+                  font-semibold
+                  text-white
+                  rounded
+                  hover:bg-[#ffffff11]
+                  transition
+                  duration-300
+                  mx-1
+                "
+                href="/"
+                >Galeria</a
+              >
             </li>
           </ul>
         </div>
@@ -64,6 +120,11 @@
             <li>
               <p class="text-white" href="/adote">
                 Telefone: &#40;47&#41; 3803-7200
+              </p>
+            </li>
+            <li>
+              <p class="text-white" href="/adote">
+                E-mail: ifacolhe@proton.me
               </p>
             </li>
           </ul>
