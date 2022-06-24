@@ -21,21 +21,21 @@
                     <!-- ENTRAR -->
                     <div class="flex items-center py-4 px-2" v-if="!showMenu">
                         <router-link
-                            class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2"
+                              class="py-2 px-6 font-semibold text-white rounded hover:bg-[#ffffff11]  transition duration-300 mx-1"
                             to="/adote"
                         >
                             <span>Adote</span>
                         </router-link>
 
                         <router-link
-                            class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2"
+                            class="py-2 px-6 font-semibold text-white rounded hover:bg-[#ffffff11]  transition duration-300 mx-1"
                             to="/apoie"
                         >
                             <span>Apoie</span>
                         </router-link>
 
                         <router-link
-                            class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2"
+                              class="py-2 px-6 font-semibold text-white rounded hover:bg-[#ffffff11]  transition duration-300 mx-1"
                             to="/admin"
                             v-if="isAuthenticated"
                         >
@@ -43,7 +43,7 @@
                         </router-link>
 
                         <router-link
-                            class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2"
+                              class="py-2 px-6 font-semibold text-white rounded hover:bg-[#ffffff11]  transition duration-300 mx-1"
                             to="/login"
                             v-if="!isAuthenticated"
                         >
@@ -51,7 +51,7 @@
                         </router-link>
 
                         <router-link
-                            class="py-2 px-2 font-semibold text-white rounded hover:bg-white hover:text-[#15393C] transition duration-300 mx-2"
+                              class="py-2 px-6 font-semibold text-white rounded hover:bg-[#ffffff11]  transition duration-300 mx-1"
                             to="/logout"
                             v-if="isAuthenticated"
                         >

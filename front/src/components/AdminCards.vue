@@ -44,7 +44,7 @@
     </div>
     <span>
 
-        <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control  w-20" /></button>
+        <button class="card-control left" @click="left"><ChevronLeftIcon class="card-control w-20" /></button>
         <button class="card-control right" @click="right"><ChevronRightIcon class="card-control w-20" /></button>
     </span>
 </span>

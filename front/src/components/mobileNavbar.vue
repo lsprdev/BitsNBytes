@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <div class="mobile-menu" :class="{hidden: showMenu}">
+            <div class="mobile-menu" :class="{hidden: !showMenu}">
                 <ul class="">
                     <li>
                         <router-link class="text-white font-semibold block text-sm px-4 py-4 hover:bg-white-500 transition duration-300" to="/">
