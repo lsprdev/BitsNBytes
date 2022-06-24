@@ -38,23 +38,35 @@ const routes = [
                 name: "Admin",
                 component: () => import("./views/Admin.vue"),
             },
+
             {
-                path: "admin/add",
+                path: "/galeria/:id",
+                name: "Galeria",
+                component: () => import("./views/Galeria.vue"),
+            },
+            {
+                path: "/comentar/:id",
+                name: "Comentar",
+                component: () => import("./views/Comentar.vue"),
+            },
+
+            {
+                path: "/admin/add",
                 name: "Add",
                 component: () => import("./views/Add.vue"),
             },
             {
-                path: "admin/updog/:id",
+                path: "/admin/updog/:id",
                 name: "Update",
                 component: () => import("./views/Updog.vue"),
             },
             {
-                path: "admin/diario/:id",
+                path: "/admin/diario/:id",
                 name: "Registrod",
                 component: () => import("./views/RegDiario.vue"),
             },
             {
-                path: "admin/consultas/:id",
+                path: "/admin/consultas/:id",
                 name: "Registrom",
                 component: () => import("./views/Consultas.vue"),
             },

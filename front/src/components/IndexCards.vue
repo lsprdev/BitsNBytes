@@ -20,16 +20,17 @@
                                 {{ card.description }}
                             </p>
                             <div class="flex justify-center flex-row">
-                                <a
+                                <router-link
+                                    v-bind:to="'/comentar/' + card.id"
                                     type="button"
                                     class="inline-block px-6 py-2.5 mr-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                    >Comentar</a
-                                >
-                                <a
+                                    >Comentar</router-link>
+                                <router-link
+                                    v-bind:to="'/galeria/' + card.id"
                                     type="button"
                                     class="inline-block px-6 py-2.5 ml-3 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                    >Galeria</a
-                                >
+                                    >Galeria</router-link>
+
                             </div>
                         </div>
                     </div>
