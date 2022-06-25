@@ -39,7 +39,6 @@ app.post("/api/regdAdd/:dog_id", api.regdAdd);
 app.post("/api/regmAdd/:dog_id", api.regmAdd);
 
 
-
 // END -- FOR API
 // ============================================================
 
