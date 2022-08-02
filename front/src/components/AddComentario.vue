@@ -4,7 +4,7 @@
           
         <div class="w-full h-full ">
             
-            <form class="bg-[#15393C] rounded px-14 pt-8 pb-8 mb-8" v-bind:action="'http://localhost:7777/api/regdAdd/'+dog.id" method="post">
+            <form class="bg-[#15393C] rounded px-14 pt-8 pb-8 mb-8" v-bind:action="'https://if-acolhe-back.herokuapp.com/api/regdAdd/'+dog.id" method="post">
 
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="username">
@@ -89,7 +89,7 @@ export default {
     },
     mounted() {
         
-        axios.get("http://localhost:7777/api/dog/" + this.$route.params.id)
+        axios.get("https://if-acolhe-back.herokuapp.com/api/dog/" + this.$route.params.id)
             .then(response => {
                 this.dog = response.data;
             })

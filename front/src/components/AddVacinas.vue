@@ -4,7 +4,7 @@
           
         <div class="w-full h-full ">
             
-            <form class="bg-[#15393C] rounded px-14 pt-8 pb-8 mb-8" v-bind:action="'http://localhost:7777/api/regdAdd/'+dog.id" method="post">
+            <form class="bg-[#15393C] rounded px-14 pt-8 pb-8 mb-8" v-bind:action="'https://if-acolhe-back.herokuapp.com/api/regdAdd/'+dog.id" method="post">
                 
                 <div class="flex justify-between mb-4 mr-2">
                     <div class="flex">

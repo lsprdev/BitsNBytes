@@ -45,7 +45,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/adoptable").then((response) => (this.cards = response));
+        axios.get("https://if-acolhe-back.herokuapp.com/api/adoptable").then((response) => (this.cards = response));
     },
     methods: {
         left() {

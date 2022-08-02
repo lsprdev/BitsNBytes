@@ -65,7 +65,7 @@ export default {
         };
     },
     mounted() {
-        axios.get("http://localhost:7777/api/dogs").then((response) => (this.cards = response));
+        axios.get("https://if-acolhe-back.herokuapp.com/api/dogs").then((response) => (this.cards = response));
     },
     methods: {
         left() {
@@ -121,19 +121,3 @@ export default {
 }
 
 </style>
-
-
-<!-- <div class="flex flex-col px-8 sm:flex-row sm:justify-between">
-                            <a
-                                v-bind:href="'/admin/regd/'+ card.id"
-                                type="button"
-                                class="inline-block px-6 py-2.5 mr-1 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                >Registros</a
-                            >
-                            <a  
-                                v-bind:href="'/admin/updog/'+ card.id"
-                                type="button"
-                                class="inline-block px-6 py-2.5 ml-1 bg-white text-[#15393C] cursor-pointer font-semibold text-xs leading-tight uppercase rounded shadow-md"
-                                >Editar</a
-                            >
-                        </div> -->

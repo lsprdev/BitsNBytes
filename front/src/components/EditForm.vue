@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center max-w-3xl mx-auto py-10">
         <div class="w-full h-full ">
-            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" v-bind:action="'http://localhost:7777/api/dogupdate/' + dog.id" method="post">
+            <form class="bg-[#15393C] rounded px-12 pt-8 pb-8 mb-8" v-bind:action="'https://if-acolhe-back.herokuapp.com/api/dogupdate/' + dog.id" method="post">
 
                 <div class="flex mb-4">
                     <img :src="dog.photo" class="rounded-lg h-48 w-52" alt="Avatar" />
@@ -175,7 +175,7 @@ export default {
     },
     mounted() {
 
-        axios.get("http://localhost:7777/api/dog/" + this.$route.params.id)
+        axios.get("https://if-acolhe-back.herokuapp.com/api/dog/" + this.$route.params.id)
             .then(response => {
                 this.dog = response.data;
             })
@@ -183,7 +183,7 @@ export default {
     // Arrumar
     methods: {
         excluir(dog_id) {
-            axios.post(`http://localhost:7777/api/dogdel/${dog_id}`).then(response => {
+            axios.post(`https://if-acolhe-back.herokuapp.com/api/dogdel/${dog_id}`).then(response => {
                 this.$router.push('/admin');
                 return response.data;
             })
