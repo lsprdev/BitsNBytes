@@ -2,8 +2,6 @@ import { PrismaClient } from '@prisma/client';
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import { auth } from 'express-openid-connect';
-import { config } from "../auth/authConfig";
 
 import * as api from "././controllers/api.controller";
 
@@ -14,7 +12,7 @@ const prisma = new PrismaClient();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.use(auth(config));
+
 
 const port = process.env.PORT || 3000;
 
