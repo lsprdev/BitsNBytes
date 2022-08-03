@@ -1,3 +1,8 @@
+# IF ACOLHE 
+#### Primeiro lugar no Hackathon IFC Araquari
+https://noticias.araquari.ifc.edu.br/evento-info-hackathon/
+
+# Instalando e rodando Front/Back
 ### Entra no diretório server
 ```
 cd server
